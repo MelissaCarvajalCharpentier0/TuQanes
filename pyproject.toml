@@ -1,0 +1,25 @@
+[project]
+name = "tuqanes"
+version = "0.1.0"
+description = "Quantathon CR 2026 - Challenge 2 - Quantum Machine Learning"
+requires-python = ">=3.10"
+
+dependencies = [
+    "numpy==2.5.1",
+    "pandas==3.0.3",
+    "scipy==1.18.0",
+
+    "scikit-learn",
+
+    "matplotlib==3.11.1",
+    "seaborn==0.13.2",
+
+    "jupyter",
+    "ipykernel",
+    "nbformat==5.10.4",
+
+    "guppylang==0.21.16",
+    "qiskit==2.5.0",
+    "qiskit-aer==0.17.2",
+    "scikit-learn==1.9.0"
+]
