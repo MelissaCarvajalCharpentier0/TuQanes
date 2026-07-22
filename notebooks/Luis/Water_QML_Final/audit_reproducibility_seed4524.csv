@@ -1,0 +1,6 @@
+Check,Value
+RBF_N32_BA_SD,0.1373803306996962
+Custom_N64_BA_SD,0.1373803306996962
+SD_Absolute_Difference,0.0
+Fold_Values_Exactly_Equal,False
+Exact_Kernel_N16_Lambda_Min,0.11656603727070912

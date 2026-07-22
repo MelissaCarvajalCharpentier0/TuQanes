@@ -1,0 +1,2 @@
+Seeds,Subset_Sizes,Models,Expected_Rows,Observed_Rows,Seed_4524_Core_Metrics_Reproduced,Seed_4524_AUC_N32_N64_Reproduced,AUC_N16_Policy,Test_Used,Status
+20,3,5,6000,6000,True,True,New run calculated AUC; old run stored NaN,False,PASS

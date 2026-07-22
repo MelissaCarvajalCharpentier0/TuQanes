@@ -1,0 +1,17 @@
+{
+  "Candidates": [
+    "ZZ_Linear",
+    "Custom_Domain"
+  ],
+  "Dataset": "N16 seed4524",
+  "Pair_Policy": "all 120 off-diagonal pairs",
+  "Diagonal_Pairs_Included": false,
+  "Compiler": "pytket-quantinuum",
+  "Backend_Model": "H2",
+  "Target_2Q_Gate": "ZZPhase",
+  "Optimisation_Level": 2,
+  "Selection_Criterion": "minimum total compiled two-qubit gates",
+  "Selected_Model": null,
+  "Selection_Status": "LOCAL_COMPILE_TIE_REQUIRES_NEXUS_CONFIRMATION",
+  "Test_Used": false
+}

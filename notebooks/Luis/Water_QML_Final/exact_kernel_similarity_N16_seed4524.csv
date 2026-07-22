@@ -1,0 +1,7 @@
+Kernel_A,Kernel_B,Centered_Kernel_Similarity
+Separable_Control,ZZ_Linear,0.7882000375308036
+Separable_Control,Pauli_Z_YY,0.7958642696847923
+Separable_Control,Custom_Domain,0.7035308323743024
+ZZ_Linear,Pauli_Z_YY,0.9677803760519104
+ZZ_Linear,Custom_Domain,0.8353295160141759
+Pauli_Z_YY,Custom_Domain,0.8320970182664015

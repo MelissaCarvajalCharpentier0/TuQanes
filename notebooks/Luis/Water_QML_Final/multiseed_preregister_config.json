@@ -1,0 +1,87 @@
+{
+  "project": "Quantathon CR 2026 - Water QML",
+  "protocol_version": "Multiseed_v1_frozen",
+  "base_seed": 4524,
+  "seeds": [
+    4524,
+    4525,
+    4526,
+    4527,
+    4528,
+    4529,
+    4530,
+    4531,
+    4532,
+    4533,
+    4534,
+    4535,
+    4536,
+    4537,
+    4538,
+    4539,
+    4540,
+    4541,
+    4542,
+    4543
+  ],
+  "n_seeds": 20,
+  "subset_sizes": [
+    16,
+    32,
+    64
+  ],
+  "nested_subsets": true,
+  "balanced_subsets": true,
+  "source_partition": "training_only",
+  "training_size": 1608,
+  "sealed_test_size": 403,
+  "features": [
+    "ph",
+    "Hardness",
+    "Sulfate",
+    "Conductivity"
+  ],
+  "target": "Potability",
+  "cv": {
+    "method": "RepeatedStratifiedKFold",
+    "n_splits": 4,
+    "n_repeats": 5,
+    "folds_per_subset": 20,
+    "random_state_rule": "seed + subset_size"
+  },
+  "models": [
+    "SVM_RBF_Fixed",
+    "Separable_Control",
+    "ZZ_Linear",
+    "Pauli_Z_YY",
+    "Custom_Domain"
+  ],
+  "fixed_parameters": {
+    "SVM_RBF_C": 1.0,
+    "SVM_RBF_gamma": "scale",
+    "SVM_RBF_class_weight": null,
+    "QSVM_C": 1.0,
+    "QSVM_class_weight": null,
+    "theta_transform": "(pi/2)*tanh(z)"
+  },
+  "primary_size": 64,
+  "primary_metric": "Balanced_Accuracy",
+  "secondary_metrics": [
+    "MCC",
+    "F1",
+    "ROC_AUC",
+    "Specificity",
+    "Unsafe_Acceptance"
+  ],
+  "statistical_unit": "seed",
+  "selection_rule": [
+    "highest median CV Balanced Accuracy at N=64",
+    "must outperform Separable_Control",
+    "tie below 0.01 resolved by win rate versus RBF",
+    "final tie resolved by lower compiled two-qubit gate count"
+  ],
+  "geometry_policy": "audit-only; never used for feature-map selection",
+  "partial_results_policy": "do not inspect or alter protocol during execution",
+  "test_policy": "single batch opening after model selection; no reselection",
+  "extension_rule": "extend final N=64 comparison to 50 seeds only if bootstrap interval is inconclusive"
+}

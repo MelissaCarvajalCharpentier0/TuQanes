@@ -1,0 +1,28 @@
+{
+    "dataset_path": "/content/drive/MyDrive/Quanthaton/water_potability_complete_cases.csv",
+    "n_samples": 2011,
+    "n_features": 9,
+    "features": [
+        "ph",
+        "Hardness",
+        "Solids",
+        "Chloramines",
+        "Sulfate",
+        "Conductivity",
+        "Organic_carbon",
+        "Trihalomethanes",
+        "Turbidity"
+    ],
+    "target": "Potability",
+    "seed": 4524,
+    "test_size": 0.2,
+    "train_n": 1608,
+    "test_n": 403,
+    "cv_n_splits": 5,
+    "cv_n_repeats": 3,
+    "cv_total_splits": 15,
+    "python_version": "3.12.13",
+    "numpy_version": "2.0.2",
+    "pandas_version": "2.2.2",
+    "scikit_learn_version": "1.6.1"
+}

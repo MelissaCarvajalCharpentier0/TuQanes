@@ -1,0 +1,2 @@
+Model,N,Folds,BA_Mean,BA_SD,MCC_Mean,F1_Mean,Specificity_Mean,Unsafe_Acceptance_Mean
+Custom_Exact,16,20,0.5125,0.22176030208075417,0.021132486540518698,0.4066666666666666,0.575,0.425

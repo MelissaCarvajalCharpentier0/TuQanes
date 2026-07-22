@@ -1,0 +1,13 @@
+{
+  "Primary_N": 64,
+  "Primary_Metric": "Balanced_Accuracy",
+  "Seeds": 20,
+  "Tie_Threshold_BA": 0.01,
+  "Selected_Model": null,
+  "Selection_Status": "PENDING_COMPILED_TWO_QUBIT_GATE_COUNT",
+  "Tied_Candidates": [
+    "ZZ_Linear",
+    "Custom_Domain"
+  ],
+  "Test_Used": false
+}

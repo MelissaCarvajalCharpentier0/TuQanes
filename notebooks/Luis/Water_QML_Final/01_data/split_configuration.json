@@ -1,0 +1,26 @@
+{
+    "seed": 4524,
+    "test_size": 0.2,
+    "total_n": 2011,
+    "train_n": 1608,
+    "test_n": 403,
+    "n_splits": 5,
+    "n_repeats": 3,
+    "total_cv_splits": 15,
+    "target": "Potability",
+    "features": [
+        "ph",
+        "Hardness",
+        "Solids",
+        "Chloramines",
+        "Sulfate",
+        "Conductivity",
+        "Organic_carbon",
+        "Trihalomethanes",
+        "Turbidity"
+    ],
+    "train_class_0": 960,
+    "train_class_1": 648,
+    "test_class_0": 240,
+    "test_class_1": 163
+}
