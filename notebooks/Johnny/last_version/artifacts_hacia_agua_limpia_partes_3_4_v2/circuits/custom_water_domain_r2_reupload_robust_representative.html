@@ -1,0 +1,121 @@
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- Download Vue 3-->
+<script type="application/javascript" src="https://unpkg.com/vue@3"></script>
+<!-- Download Circuit Renderer with styles -->
+<script type="application/javascript" src="https://unpkg.com/pytket-circuit-renderer@0.10/dist/pytket-circuit-renderer.umd.js"></script>
+<link rel="stylesheet" href="https://unpkg.com/pytket-circuit-renderer@0.10/dist/pytket-circuit-renderer.css">
+
+<!-- Fallback to jsdelivr in case UNPKG is down -->
+<script type="application/javascript">
+    if (typeof Vue === "undefined") {
+        const loadVue = new Promise(resolve => {
+            const vueFallback = document.createElement("script")
+            vueFallback.type = "application/javascript"
+            vueFallback.src = "https://cdn.jsdelivr.net/npm/vue@3"
+            vueFallback.async = false
+            vueFallback.defer = false
+            vueFallback.addEventListener('load', () => {
+              console.log("vue loaded");
+              resolve(true)
+            })
+            document.head.appendChild(vueFallback)
+        })
+        const loadRenderer = new Promise(resolve => {
+            const rendererFallback = document.createElement("script")
+            rendererFallback.type = "application/javascript"
+            rendererFallback.src = "https://cdn.jsdelivr.net/npm/pytket-circuit-renderer@0.10/dist/pytket-circuit-renderer.umd.min.js"
+            rendererFallback.async = false
+            rendererFallback.defer = false
+            rendererFallback.addEventListener('load', () => {
+              console.log("renderer loaded");
+              resolve(true)
+            })
+            document.head.appendChild(rendererFallback)
+        })
+        const loadCSS = new Promise(resolve => {
+            const cssFallback = document.createElement("link")
+            cssFallback.rel = "stylesheet"
+            cssFallback.href = "https://cdn.jsdelivr.net/npm/pytket-circuit-renderer@0.10/dist/pytket-circuit-renderer.min.css"
+            cssFallback.addEventListener('load', () => {
+              console.log("css loaded");
+              resolve(true)
+            })
+            document.head.appendChild(cssFallback)
+        })
+        window['_circuitRendererLoading'] = Promise.all([loadVue, loadRenderer, loadCSS])
+    } else {
+        window['_circuitRendererLoading'] = new Promise(resolve => resolve("already loaded"))
+    }
+</script>
+</head>
+<body>
+
+
+<div style="
+    position:absolute;
+    top:0;bottom:0;left:0;right:0;
+    margin:auto;resize:both;display:block;overflow:hidden;
+    width:min(500px, 100%);
+    height:min(400px, 100%);
+    max-width:100%;
+    max-height:100%;">
+
+    <div id="circuit-display-vue-container-9256c59c-3c3b-47f3-a566-36773c0a2ed4" class="pytket-circuit-display-container">
+        <div style="display: none">
+            <div id="circuit-json-to-display">{"bits": [], "commands": [{"args": [["q", [0]]], "op": {"type": "H"}}, {"args": [["q", [1]]], "op": {"type": "H"}}, {"args": [["q", [2]]], "op": {"type": "H"}}, {"args": [["q", [3]]], "op": {"type": "H"}}, {"args": [["q", [4]]], "op": {"type": "H"}}, {"args": [["q", [0]]], "op": {"params": ["0.157795996216933"], "type": "Ry"}}, {"args": [["q", [1]]], "op": {"params": ["0.0977444457742325"], "type": "Ry"}}, {"args": [["q", [2]]], "op": {"params": ["0.00282056163114764"], "type": "Ry"}}, {"args": [["q", [3]]], "op": {"params": ["0.0498587759492168"], "type": "Ry"}}, {"args": [["q", [4]]], "op": {"params": ["3.86193879973131"], "type": "Ry"}}, {"args": [["q", [0]]], "op": {"params": ["0.0206574263649968"], "type": "Rz"}}, {"args": [["q", [1]]], "op": {"params": ["0.00792626213427947"], "type": "Rz"}}, {"args": [["q", [2]]], "op": {"params": ["6.60017486289963e-06"], "type": "Rz"}}, {"args": [["q", [3]]], "op": {"params": ["0.00206237425470571"], "type": "Rz"}}, {"args": [["q", [4]]], "op": {"params": ["3.98418651672446"], "type": "Rz"}}, {"args": [["q", [1]], ["q", [0]]], "op": {"params": ["0.0420438151702745"], "type": "ZZPhase"}}, {"args": [["q", [2]], ["q", [4]]], "op": {"params": ["3.99907695377961"], "type": "ZZPhase"}}, {"args": [["q", [3]], ["q", [0]]], "op": {"params": ["0.0205138174652916"], "type": "ZZPhase"}}, {"args": [["q", [1]], ["q", [4]]], "op": {"params": ["3.97441002097173"], "type": "ZZPhase"}}, {"args": [["q", [0]]], "op": {"params": ["0.0525986654056444"], "type": "Rx"}}, {"args": [["q", [1]]], "op": {"params": ["0.0325814819247442"], "type": "Rx"}}, {"args": [["q", [3]], ["q", [2]]], "op": {"params": ["0.000233341215508962"], "type": "ZZPhase"}}, {"args": [["q", [4]]], "op": {"params": ["3.95397959991044"], "type": "Rx"}}, {"args": [["q", [0]]], "op": {"params": ["0.11157861896908"], "type": "Ry"}}, {"args": [["q", [1]]], "op": {"params": ["0.0691157604302805"], "type": "Ry"}}, {"args": [["q", [2]]], "op": {"params": ["0.000940187210382546"], "type": "Rx"}}, {"args": [["q", [3]]], "op": {"params": ["0.0166195919830723"], "type": "Rx"}}, {"args": [["q", [4]]], "op": {"params": ["3.90237598907126"], "type": "Ry"}}, {"args": [["q", [0]]], "op": {"params": ["0.014607006264551"], "type": "Rz"}}, {"args": [["q", [1]]], "op": {"params": ["0.00560471370461117"], "type": "Rz"}}, {"args": [["q", [2]]], "op": {"params": ["0.00199443825613909"], "type": "Ry"}}, {"args": [["q", [3]]], "op": {"params": ["0.035255478575352"], "type": "Ry"}}, {"args": [["q", [4]]], "op": {"params": ["3.98881817874168"], "type": "Rz"}}, {"args": [["q", [1]], ["q", [0]]], "op": {"params": ["0.029729466813855"], "type": "ZZPhase"}}, {"args": [["q", [2]]], "op": {"params": ["4.66702840257332e-06"], "type": "Rz"}}, {"args": [["q", [3]]], "op": {"params": ["0.00145831882084696"], "type": "Rz"}}, {"args": [["q", [3]], ["q", [0]]], "op": {"params": ["0.0145054594377307"], "type": "ZZPhase"}}, {"args": [["q", [2]], ["q", [4]]], "op": {"params": ["3.99934730775821"], "type": "ZZPhase"}}, {"args": [["q", [0]]], "op": {"params": ["0.0371928729896934"], "type": "Rx"}}, {"args": [["q", [1]], ["q", [4]]], "op": {"params": ["3.98190515229869"], "type": "ZZPhase"}}, {"args": [["q", [3]], ["q", [2]]], "op": {"params": ["0.000164997155816699"], "type": "ZZPhase"}}, {"args": [["q", [1]]], "op": {"params": ["0.0230385868100935"], "type": "Rx"}}, {"args": [["q", [2]]], "op": {"params": ["0.000664812752046362"], "type": "Rx"}}, {"args": [["q", [3]]], "op": {"params": ["0.011751826191784"], "type": "Rx"}}, {"args": [["q", [4]]], "op": {"params": ["3.96745866302375"], "type": "Rx"}}], "created_qubits": [], "discarded_qubits": [], "implicit_permutation": [[["q", [0]], ["q", [0]]], [["q", [1]], ["q", [1]]], [["q", [2]], ["q", [2]]], [["q", [3]], ["q", [3]]], [["q", [4]], ["q", [4]]]], "phase": "0.0", "qubits": [["q", [0]], ["q", [1]], ["q", [2]], ["q", [3]], ["q", [4]]]}</div>
+        </div>
+        <circuit-display-container
+                :circuit-element-str="'#circuit-json-to-display'"
+                :init-render-options="initRenderOptions"
+                view-format="None"
+        ></circuit-display-container>
+    </div>
+    <script type="application/javascript">
+      (async function () {
+        await window['_circuitRendererLoading']
+
+        const circuitRendererUid = "9256c59c-3c3b-47f3-a566-36773c0a2ed4";
+        const displayOptions = JSON.parse('{"recursive": true, "condensed": false, "darkTheme": false}');
+
+        // Script to initialise the circuit renderer app
+
+const { createApp } = Vue;
+const circuitDisplayContainer = window["pytket-circuit-renderer"].default;
+// Init variables to be shared between circuit display instances
+if (typeof window.pytketCircuitDisplays === "undefined") {
+    window.pytketCircuitDisplays = {};
+}
+// Create the root Vue component
+const app = createApp({
+    delimiters: ['[[#', '#]]'],
+    components: { circuitDisplayContainer },
+    data () {
+      return {
+        initRenderOptions: displayOptions,
+      }
+    }
+})
+app.config.unwrapInjectedRef = true;
+app.mount("#circuit-display-vue-container-"+circuitRendererUid);
+window.pytketCircuitDisplays[circuitRendererUid] = app;
+      })()
+    </script>
+
+
+</div>
+
+
+</body>
+</html>
+
+
