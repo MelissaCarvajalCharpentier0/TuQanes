@@ -1,0 +1,210 @@
+{
+  "input_artifacts": "C:\\Users\\johnn\\OneDrive\\Documentos\\Quanthaton\\TuQanes\\notebooks\\Johnny\\last_version\\artifacts_hacia_agua_limpia_partes_1_2",
+  "output_artifacts": "C:\\Users\\johnn\\OneDrive\\Documentos\\Quanthaton\\TuQanes\\notebooks\\Johnny\\last_version\\artifacts_hacia_agua_limpia_partes_3_4",
+  "pytket_version": "2.18.1",
+  "n_samples": 80,
+  "n_qubits": 5,
+  "features": [
+    "Sulfate",
+    "ph",
+    "Solids",
+    "Chloramines",
+    "Hardness"
+  ],
+  "maps_evaluated": [
+    {
+      "name": "zz_linear_r1_robust",
+      "family": "ZZFeatureMap",
+      "scaling": "robust_atan",
+      "reps": 1,
+      "topology": "linear",
+      "alpha": 0.8,
+      "local_terms": [
+        "Z"
+      ],
+      "pair_terms": [
+        "ZZ"
+      ],
+      "data_reupload": false
+    },
+    {
+      "name": "zz_ring_r1_robust",
+      "family": "ZZFeatureMap",
+      "scaling": "robust_atan",
+      "reps": 1,
+      "topology": "ring",
+      "alpha": 0.8,
+      "local_terms": [
+        "Z"
+      ],
+      "pair_terms": [
+        "ZZ"
+      ],
+      "data_reupload": false
+    },
+    {
+      "name": "zz_full_r1_robust",
+      "family": "ZZFeatureMap",
+      "scaling": "robust_atan",
+      "reps": 1,
+      "topology": "full",
+      "alpha": 0.8,
+      "local_terms": [
+        "Z"
+      ],
+      "pair_terms": [
+        "ZZ"
+      ],
+      "data_reupload": false
+    },
+    {
+      "name": "zz_ring_r2_robust",
+      "family": "ZZFeatureMap",
+      "scaling": "robust_atan",
+      "reps": 2,
+      "topology": "ring",
+      "alpha": 0.8,
+      "local_terms": [
+        "Z"
+      ],
+      "pair_terms": [
+        "ZZ"
+      ],
+      "data_reupload": false
+    },
+    {
+      "name": "pauli_z_zz_linear_r1_robust",
+      "family": "PauliFeatureMap",
+      "scaling": "robust_atan",
+      "reps": 1,
+      "topology": "linear",
+      "alpha": 0.8,
+      "local_terms": [
+        "Z"
+      ],
+      "pair_terms": [
+        "ZZ"
+      ],
+      "data_reupload": false
+    },
+    {
+      "name": "pauli_z_zz_ring_r1_robust",
+      "family": "PauliFeatureMap",
+      "scaling": "robust_atan",
+      "reps": 1,
+      "topology": "ring",
+      "alpha": 0.8,
+      "local_terms": [
+        "Z"
+      ],
+      "pair_terms": [
+        "ZZ"
+      ],
+      "data_reupload": false
+    },
+    {
+      "name": "pauli_xz_xxzz_linear_r1_robust",
+      "family": "PauliFeatureMap",
+      "scaling": "robust_atan",
+      "reps": 1,
+      "topology": "linear",
+      "alpha": 0.55,
+      "local_terms": [
+        "X",
+        "Z"
+      ],
+      "pair_terms": [
+        "XX",
+        "ZZ"
+      ],
+      "data_reupload": false
+    },
+    {
+      "name": "pauli_z_zz_ring_r1_minmax",
+      "family": "PauliFeatureMap",
+      "scaling": "minmax",
+      "reps": 1,
+      "topology": "ring",
+      "alpha": 0.8,
+      "local_terms": [
+        "Z"
+      ],
+      "pair_terms": [
+        "ZZ"
+      ],
+      "data_reupload": false
+    },
+    {
+      "name": "custom_water_domain_r1_robust",
+      "family": "custom_water_domain",
+      "scaling": "robust_atan",
+      "reps": 1,
+      "topology": "domain",
+      "alpha": 0.9,
+      "local_terms": [
+        "Z"
+      ],
+      "pair_terms": [
+        "ZZ"
+      ],
+      "data_reupload": false
+    },
+    {
+      "name": "custom_water_domain_r2_reupload_robust",
+      "family": "custom_water_domain",
+      "scaling": "robust_atan",
+      "reps": 2,
+      "topology": "domain",
+      "alpha": 0.75,
+      "local_terms": [
+        "Z"
+      ],
+      "pair_terms": [
+        "ZZ"
+      ],
+      "data_reupload": true
+    }
+  ],
+  "C_grid": [
+    0.1,
+    1.0,
+    10.0
+  ],
+  "shots_grid": [
+    256,
+    1024,
+    4096
+  ],
+  "noise_levels": [
+    0.01,
+    0.03,
+    0.05
+  ],
+  "best_map_by_f1_mean": {
+    "map": "custom_water_domain_r2_reupload_robust",
+    "family": "custom_water_domain",
+    "C": 1.0,
+    "scaling": "robust_atan",
+    "reps": 2,
+    "topology": "domain",
+    "accuracy_mean": 0.65,
+    "accuracy_std": 0.09478594305064438,
+    "balanced_accuracy_mean": 0.65,
+    "balanced_accuracy_std": 0.09478594305064438,
+    "precision_mean": 0.6972727272727273,
+    "precision_std": 0.19138468897368388,
+    "recall_mean": 0.7,
+    "recall_std": 0.18957188610128875,
+    "specificity_mean": 0.6,
+    "specificity_std": 0.2850438562747845,
+    "f1_mean": 0.659792663476874,
+    "f1_std": 0.08770632787971226,
+    "mcc_mean": 0.32862065372807353,
+    "mcc_std": 0.20682999709237593
+  },
+  "notes": [
+    "CV recomputa imputacion y escalado por fold.",
+    "Figuras globales usan preprocesamiento global solo descriptivo.",
+    "Ruido proxy no es un modelo fisico de hardware."
+  ]
+}

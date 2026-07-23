@@ -1,0 +1,121 @@
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- Download Vue 3-->
+<script type="application/javascript" src="https://unpkg.com/vue@3"></script>
+<!-- Download Circuit Renderer with styles -->
+<script type="application/javascript" src="https://unpkg.com/pytket-circuit-renderer@0.10/dist/pytket-circuit-renderer.umd.js"></script>
+<link rel="stylesheet" href="https://unpkg.com/pytket-circuit-renderer@0.10/dist/pytket-circuit-renderer.css">
+
+<!-- Fallback to jsdelivr in case UNPKG is down -->
+<script type="application/javascript">
+    if (typeof Vue === "undefined") {
+        const loadVue = new Promise(resolve => {
+            const vueFallback = document.createElement("script")
+            vueFallback.type = "application/javascript"
+            vueFallback.src = "https://cdn.jsdelivr.net/npm/vue@3"
+            vueFallback.async = false
+            vueFallback.defer = false
+            vueFallback.addEventListener('load', () => {
+              console.log("vue loaded");
+              resolve(true)
+            })
+            document.head.appendChild(vueFallback)
+        })
+        const loadRenderer = new Promise(resolve => {
+            const rendererFallback = document.createElement("script")
+            rendererFallback.type = "application/javascript"
+            rendererFallback.src = "https://cdn.jsdelivr.net/npm/pytket-circuit-renderer@0.10/dist/pytket-circuit-renderer.umd.min.js"
+            rendererFallback.async = false
+            rendererFallback.defer = false
+            rendererFallback.addEventListener('load', () => {
+              console.log("renderer loaded");
+              resolve(true)
+            })
+            document.head.appendChild(rendererFallback)
+        })
+        const loadCSS = new Promise(resolve => {
+            const cssFallback = document.createElement("link")
+            cssFallback.rel = "stylesheet"
+            cssFallback.href = "https://cdn.jsdelivr.net/npm/pytket-circuit-renderer@0.10/dist/pytket-circuit-renderer.min.css"
+            cssFallback.addEventListener('load', () => {
+              console.log("css loaded");
+              resolve(true)
+            })
+            document.head.appendChild(cssFallback)
+        })
+        window['_circuitRendererLoading'] = Promise.all([loadVue, loadRenderer, loadCSS])
+    } else {
+        window['_circuitRendererLoading'] = new Promise(resolve => resolve("already loaded"))
+    }
+</script>
+</head>
+<body>
+
+
+<div style="
+    position:absolute;
+    top:0;bottom:0;left:0;right:0;
+    margin:auto;resize:both;display:block;overflow:hidden;
+    width:min(500px, 100%);
+    height:min(400px, 100%);
+    max-width:100%;
+    max-height:100%;">
+
+    <div id="circuit-display-vue-container-0bcaddf3-24f3-4dc4-b5bc-877174538686" class="pytket-circuit-display-container">
+        <div style="display: none">
+            <div id="circuit-json-to-display">{"bits": [], "commands": [{"args": [["q", [0]]], "op": {"type": "H"}}, {"args": [["q", [1]]], "op": {"type": "H"}}, {"args": [["q", [2]]], "op": {"type": "H"}}, {"args": [["q", [3]]], "op": {"type": "H"}}, {"args": [["q", [4]]], "op": {"type": "H"}}, {"args": [["q", [0]]], "op": {"box": {"cx_config": "Tree", "id": "2de74cef-894a-401a-a37c-bc7869c8009a", "paulis": ["Z"], "phase": "0.224420972397416", "type": "PauliExpBox"}, "type": "PauliExpBox"}}, {"args": [["q", [1]]], "op": {"box": {"cx_config": "Tree", "id": "8cb4e5b9-4b65-49f0-9392-525eae86600f", "paulis": ["Z"], "phase": "0.139014322878908", "type": "PauliExpBox"}, "type": "PauliExpBox"}}, {"args": [["q", [2]]], "op": {"box": {"cx_config": "Tree", "id": "c3fa0d7b-1911-4173-8e73-c7499140ef89", "paulis": ["Z"], "phase": "0.00401146543096553", "type": "PauliExpBox"}, "type": "PauliExpBox"}}, {"args": [["q", [3]]], "op": {"box": {"cx_config": "Tree", "id": "53c247de-4bcf-40ae-9c61-765695ef1540", "paulis": ["Z"], "phase": "0.0709102591277751", "type": "PauliExpBox"}, "type": "PauliExpBox"}}, {"args": [["q", [4]]], "op": {"box": {"cx_config": "Tree", "id": "c9ff9f56-30a4-49ef-a613-570fc91d23a7", "paulis": ["Z"], "phase": "-0.196353707048797", "type": "PauliExpBox"}, "type": "PauliExpBox"}}, {"args": [["q", [0]], ["q", [1]]], "op": {"box": {"cx_config": "Tree", "id": "2133fce2-2a6e-456b-aac1-b22355b32c88", "paulis": ["Z", "Z"], "phase": "0.0389971618970662", "type": "PauliExpBox"}, "type": "PauliExpBox"}}, {"args": [["q", [1]], ["q", [2]]], "op": {"box": {"cx_config": "Tree", "id": "51531209-ddce-49fe-aacd-5acb5352267b", "paulis": ["Z", "Z"], "phase": "0.000697063938297277", "type": "PauliExpBox"}, "type": "PauliExpBox"}}, {"args": [["q", [2]], ["q", [3]]], "op": {"box": {"cx_config": "Tree", "id": "c8b919e8-7e8a-43da-8f4f-a39d077a9e0e", "paulis": ["Z", "Z"], "phase": "0.000355567566489847", "type": "PauliExpBox"}, "type": "PauliExpBox"}}, {"args": [["q", [3]], ["q", [4]]], "op": {"box": {"cx_config": "Tree", "id": "c936db61-b528-4a0a-97a9-94062d9f51f3", "paulis": ["Z", "Z"], "phase": "-0.0174043653094118", "type": "PauliExpBox"}, "type": "PauliExpBox"}}, {"args": [["q", [4]], ["q", [0]]], "op": {"box": {"cx_config": "Tree", "id": "d7560fde-99c6-4256-848a-dbee7103de00", "paulis": ["Z", "Z"], "phase": "-0.0550823623371604", "type": "PauliExpBox"}, "type": "PauliExpBox"}}], "created_qubits": [], "discarded_qubits": [], "implicit_permutation": [[["q", [0]], ["q", [0]]], [["q", [1]], ["q", [1]]], [["q", [2]], ["q", [2]]], [["q", [3]], ["q", [3]]], [["q", [4]], ["q", [4]]]], "phase": "0.0", "qubits": [["q", [0]], ["q", [1]], ["q", [2]], ["q", [3]], ["q", [4]]]}</div>
+        </div>
+        <circuit-display-container
+                :circuit-element-str="'#circuit-json-to-display'"
+                :init-render-options="initRenderOptions"
+                view-format="None"
+        ></circuit-display-container>
+    </div>
+    <script type="application/javascript">
+      (async function () {
+        await window['_circuitRendererLoading']
+
+        const circuitRendererUid = "0bcaddf3-24f3-4dc4-b5bc-877174538686";
+        const displayOptions = JSON.parse('{"recursive": true, "condensed": false, "darkTheme": false}');
+
+        // Script to initialise the circuit renderer app
+
+const { createApp } = Vue;
+const circuitDisplayContainer = window["pytket-circuit-renderer"].default;
+// Init variables to be shared between circuit display instances
+if (typeof window.pytketCircuitDisplays === "undefined") {
+    window.pytketCircuitDisplays = {};
+}
+// Create the root Vue component
+const app = createApp({
+    delimiters: ['[[#', '#]]'],
+    components: { circuitDisplayContainer },
+    data () {
+      return {
+        initRenderOptions: displayOptions,
+      }
+    }
+})
+app.config.unwrapInjectedRef = true;
+app.mount("#circuit-display-vue-container-"+circuitRendererUid);
+window.pytketCircuitDisplays[circuitRendererUid] = app;
+      })()
+    </script>
+
+
+</div>
+
+
+</body>
+</html>
+
+
