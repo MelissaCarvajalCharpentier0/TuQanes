@@ -1,0 +1,79 @@
+{
+  "dataset_path": "/root/.cache/kagglehub/datasets/adityakadiwal/water-potability/versions/3/water_potability.csv",
+  "dataset_shape": [
+    3276,
+    10
+  ],
+  "feature_order": [
+    "ph",
+    "Hardness",
+    "Solids",
+    "Chloramines",
+    "Sulfate",
+    "Conductivity",
+    "Organic_carbon",
+    "Trihalomethanes",
+    "Turbidity"
+  ],
+  "train_size": 2620,
+  "reference_holdout_size": 656,
+  "reference_holdout_seed": 20260721,
+  "selected_candidate": "optuna_trial_46",
+  "selected_params": {
+    "feature_mode": "none",
+    "imputer": "median",
+    "winsor_mode": "none",
+    "scaler": "standard",
+    "local_geometry": "density_anomaly",
+    "geometry_neighbors": 5,
+    "sampling_strategy_name": "tomek",
+    "C": 1.2519747115129674,
+    "gamma": 0.09539784477077082
+  },
+  "selected_model_dimensions": 11,
+  "threshold_policies": {
+    "default_zero": 0.0,
+    "oof_max_f1": -0.9516512901090459,
+    "oof_safety": -0.3032644845043456
+  },
+  "minimum_safety_specificity": 0.75,
+  "small64": {
+    "selection_method": "fixed_stratified_random_from_training_pool",
+    "selection_seed": 6403,
+    "cv_seed": 6411,
+    "n_samples": 64,
+    "class_counts": {
+      "0": 32,
+      "1": 32
+    },
+    "feature_order": [
+      "ph",
+      "Hardness",
+      "Solids",
+      "Chloramines",
+      "Sulfate",
+      "Conductivity",
+      "Organic_carbon",
+      "Trihalomethanes",
+      "Turbidity"
+    ],
+    "best_params": {
+      "C": 0.06286312440262014,
+      "gamma": 0.9805120710310026
+    },
+    "median_max_f1_threshold": 0.0005738159550776885,
+    "median_safety_threshold": 0.007657075444186975,
+    "minimum_safety_specificity": 0.75,
+    "source_is_training_pool_only": true,
+    "advanced_representative_selection_completed": false,
+    "qsvm_completed": false
+  },
+  "versions": {
+    "python": "3.12.13",
+    "scikit_learn": "1.6.1",
+    "imbalanced_learn": "0.14.2",
+    "optuna": "4.9.0",
+    "numpy": "2.0.2",
+    "pandas": "2.2.2"
+  }
+}

@@ -1,0 +1,9 @@
+check,passed
+only_dataset_as_external_input,True
+dataset_snapshot_hash_matches,True
+all_primary_splits_disjoint,True
+feature_selection_independent_of_quantum64,True
+four_features_four_qubits,True
+quantum64_balanced,True
+quantum64_has_no_holdout_rows,True
+no_qiskit_imported,True

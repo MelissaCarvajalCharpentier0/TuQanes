@@ -1,0 +1,53 @@
+{
+  "dataset_path": "/kaggle/input/water-potability/water_potability.csv",
+  "dataset_shape": [
+    3276,
+    10
+  ],
+  "feature_order": [
+    "ph",
+    "Hardness",
+    "Solids",
+    "Chloramines",
+    "Sulfate",
+    "Conductivity",
+    "Organic_carbon",
+    "Trihalomethanes",
+    "Turbidity"
+  ],
+  "train_size": 2620,
+  "audit_test_size": 656,
+  "audit_test_seed": 20260721,
+  "selected_trial_number": 20,
+  "selected_params": {
+    "imputer": "median",
+    "scaler": "power",
+    "balance_strategy": "smote_tomek",
+    "sampling_strategy": 0.8234281858502869,
+    "smote_k_neighbors": 5,
+    "C": 7.824520430340897,
+    "gamma": 0.05564284242478379
+  },
+  "threshold_policies": {
+    "default_zero": 0.0,
+    "oof_f1": -0.973989492219218,
+    "safety_specificity": -0.2398795495559185
+  },
+  "quantum_sample_size": 64,
+  "quantum_model_dimensions": [
+    64,
+    9
+  ],
+  "quantum_strict_9d_dimensions": [
+    64,
+    9
+  ],
+  "versions": {
+    "python": "3.12.13",
+    "scikit_learn": "1.6.1",
+    "imbalanced_learn": "0.14.2",
+    "optuna": "4.9.0",
+    "numpy": "2.0.2",
+    "pandas": "2.2.2"
+  }
+}

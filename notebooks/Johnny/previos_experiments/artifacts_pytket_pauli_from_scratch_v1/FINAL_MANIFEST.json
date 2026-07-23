@@ -1,0 +1,564 @@
+{
+  "project": "Water Potability — pytket Pauli feature map from scratch",
+  "pytket_version": "2.18.1",
+  "python_version": "3.12.13 (main, Mar  4 2026, 09:23:07) [GCC 11.4.0]",
+  "dataset_sha256": "904004bde729bfe3d2e195f46343bceead09e32a0eb95bb8184e7e20e029b2bf",
+  "run_config_sha256": "3eded569c3e7cac72f7531a6b51611d556b9bcc6a3950966e22d5713c50fe006",
+  "selected_features": [
+    "Sulfate",
+    "ph",
+    "Solids",
+    "Chloramines",
+    "Hardness"
+  ],
+  "best_map": "pauli_Z_ZZ_ring_r1_robust",
+  "best_kernel_mode": "centered_normalized",
+  "holdout_is_final": true,
+  "artifacts": [
+    {
+      "file": "DATA_LOCK.json",
+      "sha256": "f16f3c6ecc196c853cdab107221bdc3f4876a620a8e980c49f2d7bf4b663e30b",
+      "bytes": 4052
+    },
+    {
+      "file": "FINAL_LOCKED_HOLDOUT_METRICS.csv",
+      "sha256": "43ffe4ebb4f89f33cb9729634908af79838a11ce0239c20a62636ea448982a20",
+      "bytes": 467
+    },
+    {
+      "file": "FINAL_LOCKED_HOLDOUT_PREDICTIONS.csv",
+      "sha256": "dcd2f81762b48a3f5963d026ea37383c930931efc5ad5025c73c37a3bbce7ec2",
+      "bytes": 64952
+    },
+    {
+      "file": "RUN_CONFIG.json",
+      "sha256": "311ca79c800ddbb14f1464e24f59351b21e65f0ed0dbd91366ad2fc2fb553952",
+      "bytes": 1783
+    },
+    {
+      "file": "circuit_pauli_XZ_XXZZ_linear_r1_robust.qasm",
+      "sha256": "fdcc5c7c6b31f179586962f99d06862d920053028fee0a759b8dc4391e53da5e",
+      "bytes": 946
+    },
+    {
+      "file": "circuit_pauli_XZ_XXZZ_linear_r1_robust_boxed.html",
+      "sha256": "cf0b689f8a9357804ab62f54b9d4726688e52bb5b2b3fe49f3179be2bcd01dbf",
+      "bytes": 8363
+    },
+    {
+      "file": "circuit_pauli_Z_ZZ_linear_r1_minmax.qasm",
+      "sha256": "24d800529904c671445b2cb1709b57ac6230fbd295c9f5af07423bf15116c8b9",
+      "bytes": 413
+    },
+    {
+      "file": "circuit_pauli_Z_ZZ_linear_r1_minmax_boxed.html",
+      "sha256": "f9ba2b7ef378febfb1f268c43ad4490b990c817d60ac4f412aef77f34ba46aa2",
+      "bytes": 6552
+    },
+    {
+      "file": "circuit_pauli_Z_ZZ_linear_r1_robust.qasm",
+      "sha256": "24d800529904c671445b2cb1709b57ac6230fbd295c9f5af07423bf15116c8b9",
+      "bytes": 413
+    },
+    {
+      "file": "circuit_pauli_Z_ZZ_linear_r1_robust_boxed.html",
+      "sha256": "eacb146c83b0fd9d4a9191fe90a61f4523d371ef409f0583aabd728589ec50d9",
+      "bytes": 6552
+    },
+    {
+      "file": "circuit_pauli_Z_ZZ_linear_r2_robust.qasm",
+      "sha256": "fed3db9adeb55544f1a6f1567175a8ee1f6eaa2278c450141150ed76c76eb1bc",
+      "bytes": 778
+    },
+    {
+      "file": "circuit_pauli_Z_ZZ_linear_r2_robust_boxed.html",
+      "sha256": "860484a54098c03ccd2b1624d45c263b079c52dd829ce36280b2dbccc0a687d4",
+      "bytes": 8585
+    },
+    {
+      "file": "circuit_pauli_Z_ZZ_ring_r1_robust.qasm",
+      "sha256": "445af936294ab515457789e27ac9dad518e58b5e9c1f8b1a7fa4b1a47d06766e",
+      "bytes": 473
+    },
+    {
+      "file": "circuit_pauli_Z_ZZ_ring_r1_robust_boxed.html",
+      "sha256": "4675713f3033bd6df2c33c13070712eaec340e479b0e84500cc1d9ee9e8b8b02",
+      "bytes": 6767
+    },
+    {
+      "file": "feature_count_classical_audit.csv",
+      "sha256": "317763c2876a2416d34f135126182763bd6ec7ffe8b98745d68d574007567bd4",
+      "bytes": 983
+    },
+    {
+      "file": "feature_stability_folds.csv",
+      "sha256": "7c529311df00ec907291b74a81ed93dfc3da01ff41eb8c13a697dfa08dc0304e",
+      "bytes": 3493
+    },
+    {
+      "file": "feature_stability_summary.csv",
+      "sha256": "c4b11e987c9d5623bf6ef19b77338adf190ad2fce1a47abd4557d0d99a3ce3a8",
+      "bytes": 768
+    },
+    {
+      "file": "heatmap_pauli_XZ_XXZZ_linear_r1_robust_centered_normalized.png",
+      "sha256": "6c36c16139e5478bf680918c59a91b7adc6ddb7d396f1bbcea4157f7c0dd6e07",
+      "bytes": 85190
+    },
+    {
+      "file": "heatmap_pauli_XZ_XXZZ_linear_r1_robust_raw.png",
+      "sha256": "5facf8cd4f690213f599c8b2e7bd4c1c572cf2df47e7d623f321268fc744d479",
+      "bytes": 81082
+    },
+    {
+      "file": "heatmap_pauli_Z_ZZ_linear_r1_minmax_centered_normalized.png",
+      "sha256": "f5f8a49365b387921a100622376d7cdf7349f96a16ee9112f4b30493b84c00a8",
+      "bytes": 83191
+    },
+    {
+      "file": "heatmap_pauli_Z_ZZ_linear_r1_minmax_raw.png",
+      "sha256": "c7b138b577a161f6c868ce11d3c6f8ec18435686c8e3f6884bf18516ab5f3a5b",
+      "bytes": 79173
+    },
+    {
+      "file": "heatmap_pauli_Z_ZZ_linear_r1_robust_centered_normalized.png",
+      "sha256": "56214cd00acac25f584c6e16974f82690b1b2688459a3feb1a3bfa7f9b4aed9d",
+      "bytes": 83350
+    },
+    {
+      "file": "heatmap_pauli_Z_ZZ_linear_r1_robust_raw.png",
+      "sha256": "9acc229d3eff33983d89c8665a4bbd813a64347a0f18a5e8fc45fe84f1b64ed5",
+      "bytes": 78842
+    },
+    {
+      "file": "heatmap_pauli_Z_ZZ_linear_r2_robust_centered_normalized.png",
+      "sha256": "fe16d81a89e05c2fdd7ca7d426c8283fdc3967f31380d4a69a6ef20fd46f7a6f",
+      "bytes": 84674
+    },
+    {
+      "file": "heatmap_pauli_Z_ZZ_linear_r2_robust_raw.png",
+      "sha256": "c876fd34995c613c9795baad41d4eb7a1465ebcd75ac75fd93883c3acb1800d2",
+      "bytes": 81017
+    },
+    {
+      "file": "heatmap_pauli_Z_ZZ_ring_r1_robust_centered_normalized.png",
+      "sha256": "c15fc3fc1a232aabe6d94a6ea06137ed8427a05e44a58ec32f6dac99149c3e5c",
+      "bytes": 82728
+    },
+    {
+      "file": "heatmap_pauli_Z_ZZ_ring_r1_robust_raw.png",
+      "sha256": "d39929976970aad20c7847c58bc1a0af3d1bf701ebc53d87abadb6fe3f37dc9d",
+      "bytes": 79023
+    },
+    {
+      "file": "kernel_pauli_XZ_XXZZ_linear_r1_robust_centered_normalized_fold0.npz",
+      "sha256": "7b9e7585fafb766223293b046788fae2230d23ad5fb4e90ef17c8eb1031d5902",
+      "bytes": 59259
+    },
+    {
+      "file": "kernel_pauli_XZ_XXZZ_linear_r1_robust_centered_normalized_fold1.npz",
+      "sha256": "971a7ee5cf400274faa967de54f738ea614139f94f12715ecf9251d888a8ebfd",
+      "bytes": 59246
+    },
+    {
+      "file": "kernel_pauli_XZ_XXZZ_linear_r1_robust_centered_normalized_fold2.npz",
+      "sha256": "25ebd71e99abec5ee7fbefbe0fbb1158786afb64fc787693fa963ea6c4080e12",
+      "bytes": 59272
+    },
+    {
+      "file": "kernel_pauli_XZ_XXZZ_linear_r1_robust_centered_normalized_fold3.npz",
+      "sha256": "f1c2f723a75cd8d800cd6ae3c2056b7b5eb1978160dec54d9f85a78488814fb6",
+      "bytes": 59274
+    },
+    {
+      "file": "kernel_pauli_XZ_XXZZ_linear_r1_robust_centered_normalized_fold4.npz",
+      "sha256": "d990e0d72fa15b8f151fb43d2f73603d3610b57e23285b46f8af7f92ef8f9080",
+      "bytes": 59216
+    },
+    {
+      "file": "kernel_pauli_XZ_XXZZ_linear_r1_robust_raw_fold0.npz",
+      "sha256": "eef03b1b0b6ccd2840b9a95e47ef794e69f01145ff80dd106dfacc6f665e31a5",
+      "bytes": 60295
+    },
+    {
+      "file": "kernel_pauli_XZ_XXZZ_linear_r1_robust_raw_fold1.npz",
+      "sha256": "e934b23d7cd16310a727d87fabec3add49adcc7339f260cf4969898a0bc949c2",
+      "bytes": 60323
+    },
+    {
+      "file": "kernel_pauli_XZ_XXZZ_linear_r1_robust_raw_fold2.npz",
+      "sha256": "a78d3861e2d19c89cc954842cc1f55ce63fefbf818091302c8bf7182e67dea5d",
+      "bytes": 60271
+    },
+    {
+      "file": "kernel_pauli_XZ_XXZZ_linear_r1_robust_raw_fold3.npz",
+      "sha256": "4276a492994f4a10897256ca7a05f9ed4b8681b2e16a08e43e9f24fa03d498b4",
+      "bytes": 60325
+    },
+    {
+      "file": "kernel_pauli_XZ_XXZZ_linear_r1_robust_raw_fold4.npz",
+      "sha256": "419c959b54226abd0de7ffd5946bcf4ec46e6f0f7f6f36a764f26bbcbd82bd91",
+      "bytes": 60246
+    },
+    {
+      "file": "kernel_pauli_Z_ZZ_linear_r1_minmax_centered_normalized_fold0.npz",
+      "sha256": "b4047b434b4194486885a96599a5dbe90e04d325c5c1402a043c86277e72b3fa",
+      "bytes": 59304
+    },
+    {
+      "file": "kernel_pauli_Z_ZZ_linear_r1_minmax_centered_normalized_fold1.npz",
+      "sha256": "3fb6e2d90fefc99390501e7bdcd139292bc815651e0972d9b983adb093308d45",
+      "bytes": 59314
+    },
+    {
+      "file": "kernel_pauli_Z_ZZ_linear_r1_minmax_centered_normalized_fold2.npz",
+      "sha256": "1c81be4d3c228ae58c02d357e5e1664ae4a9536d0114f01ef9362b129d6a6cd8",
+      "bytes": 59353
+    },
+    {
+      "file": "kernel_pauli_Z_ZZ_linear_r1_minmax_centered_normalized_fold3.npz",
+      "sha256": "bbf9e464827937a7c5fea108dfea632edd4a78e71bee0447170d6d45f11acea0",
+      "bytes": 59350
+    },
+    {
+      "file": "kernel_pauli_Z_ZZ_linear_r1_minmax_centered_normalized_fold4.npz",
+      "sha256": "a74c45553935c3a2e9085734c0036cbed537f4164d983329aeeb05d0ad411931",
+      "bytes": 59322
+    },
+    {
+      "file": "kernel_pauli_Z_ZZ_linear_r1_minmax_raw_fold0.npz",
+      "sha256": "ddd523c9c36ffd4d52aa3336385082f1bfc3eb773865b2422b878bea8c43952d",
+      "bytes": 60439
+    },
+    {
+      "file": "kernel_pauli_Z_ZZ_linear_r1_minmax_raw_fold1.npz",
+      "sha256": "f52ba4ac8c060fec8395ac8f8100ac12bbe7418f4d0d47a2e2ef36e4e5d1dc78",
+      "bytes": 60391
+    },
+    {
+      "file": "kernel_pauli_Z_ZZ_linear_r1_minmax_raw_fold2.npz",
+      "sha256": "b80eec3638077d8e0ff8be23a70897e3239045eba65c5de36b5e9f086abdde6c",
+      "bytes": 60469
+    },
+    {
+      "file": "kernel_pauli_Z_ZZ_linear_r1_minmax_raw_fold3.npz",
+      "sha256": "75ed4fdc2d0b2a7d784b6215cf9e85431744a43c9578b07790bf6dbf504cc5d7",
+      "bytes": 60511
+    },
+    {
+      "file": "kernel_pauli_Z_ZZ_linear_r1_minmax_raw_fold4.npz",
+      "sha256": "1944cdef2c103388cb24afd314adbcc1f8f82ab8855d9415a11893cbdc21cc2f",
+      "bytes": 60420
+    },
+    {
+      "file": "kernel_pauli_Z_ZZ_linear_r1_robust_centered_normalized_fold0.npz",
+      "sha256": "ec59138c75860151b3ac78a32c7688b2eca745e0598715554a6c5e7921fd18c4",
+      "bytes": 59353
+    },
+    {
+      "file": "kernel_pauli_Z_ZZ_linear_r1_robust_centered_normalized_fold1.npz",
+      "sha256": "ea5af0a48a988f16b8b4d53a65d1805e17e2437464a800fd4d5e18a7fdd6407e",
+      "bytes": 59308
+    },
+    {
+      "file": "kernel_pauli_Z_ZZ_linear_r1_robust_centered_normalized_fold2.npz",
+      "sha256": "2806646109b0db3d9dd054e776fdc2c1351af95a1a1348ae6e5ba6904bc83abe",
+      "bytes": 59381
+    },
+    {
+      "file": "kernel_pauli_Z_ZZ_linear_r1_robust_centered_normalized_fold3.npz",
+      "sha256": "427fb65e4dda4826cd66504ed7e5170a97f66ccc81a2a01d48e05c509c5f2740",
+      "bytes": 59402
+    },
+    {
+      "file": "kernel_pauli_Z_ZZ_linear_r1_robust_centered_normalized_fold4.npz",
+      "sha256": "5e38c77523361f83650cfff57ddc45d6d63206db641c4f846b3738dc44bc7499",
+      "bytes": 59357
+    },
+    {
+      "file": "kernel_pauli_Z_ZZ_linear_r1_robust_raw_fold0.npz",
+      "sha256": "77cbcbaf2a018a64ad45774d02a4515aa006bd376bd3062094dfcf75acedbb0e",
+      "bytes": 60501
+    },
+    {
+      "file": "kernel_pauli_Z_ZZ_linear_r1_robust_raw_fold1.npz",
+      "sha256": "59c94ac86b94f362d397e316559e7f3fb82832baa76b2b8c7ab61178316c49ea",
+      "bytes": 60431
+    },
+    {
+      "file": "kernel_pauli_Z_ZZ_linear_r1_robust_raw_fold2.npz",
+      "sha256": "60994bd149678a4f9eea23ce408d3d744c4a4473339f95955ccb89062e7009ca",
+      "bytes": 60489
+    },
+    {
+      "file": "kernel_pauli_Z_ZZ_linear_r1_robust_raw_fold3.npz",
+      "sha256": "de16b103bc1bb859d446b0210508da1cab342bd9a80129087dd5f615c2dd8b93",
+      "bytes": 60567
+    },
+    {
+      "file": "kernel_pauli_Z_ZZ_linear_r1_robust_raw_fold4.npz",
+      "sha256": "701b000d3787c3b395ad84d161bc5bca65c285be87f6060336443594be93991e",
+      "bytes": 60476
+    },
+    {
+      "file": "kernel_pauli_Z_ZZ_linear_r2_robust_centered_normalized_fold0.npz",
+      "sha256": "4f7dc00fd8ec52064b71335af440e66bbf6fccb3c71e596e2ff1324b6c562b62",
+      "bytes": 59098
+    },
+    {
+      "file": "kernel_pauli_Z_ZZ_linear_r2_robust_centered_normalized_fold1.npz",
+      "sha256": "89a84d39faf70443a785a38ee3c2775ce64dbff084eb6ff2f246642b09f2617d",
+      "bytes": 59151
+    },
+    {
+      "file": "kernel_pauli_Z_ZZ_linear_r2_robust_centered_normalized_fold2.npz",
+      "sha256": "8ea7a9676472a5cdfd8237b26d9c17abaaa52a50683e1f2633506c60ade5b268",
+      "bytes": 59141
+    },
+    {
+      "file": "kernel_pauli_Z_ZZ_linear_r2_robust_centered_normalized_fold3.npz",
+      "sha256": "fab428ca008bf7761baaa67c1eb4d814a5a5e6614da3fdec854025a2a6a9accf",
+      "bytes": 59156
+    },
+    {
+      "file": "kernel_pauli_Z_ZZ_linear_r2_robust_centered_normalized_fold4.npz",
+      "sha256": "c000a2a7d4275a5126fa1adfda6d94514d8f82da9cdaeaf28a238ae662c5764c",
+      "bytes": 59120
+    },
+    {
+      "file": "kernel_pauli_Z_ZZ_linear_r2_robust_raw_fold0.npz",
+      "sha256": "abd69aa45b143aa3cebb7e3ec9d6ea606b0672d91ad6ee8ae685d58c1b46cfd4",
+      "bytes": 59907
+    },
+    {
+      "file": "kernel_pauli_Z_ZZ_linear_r2_robust_raw_fold1.npz",
+      "sha256": "c423146f74817b76fbc7f56b2bd4d9fbb734ac37ee52816404966df51087bc8c",
+      "bytes": 59973
+    },
+    {
+      "file": "kernel_pauli_Z_ZZ_linear_r2_robust_raw_fold2.npz",
+      "sha256": "61466a9b1eabc40d83f90d55a031369ac5c7cfb0b20ee71f575d98a1c261bac8",
+      "bytes": 60007
+    },
+    {
+      "file": "kernel_pauli_Z_ZZ_linear_r2_robust_raw_fold3.npz",
+      "sha256": "e38050a3c92b5b0ea9d01de9f76d94892c1e003a29122f39cd2dedaedaf793b4",
+      "bytes": 60047
+    },
+    {
+      "file": "kernel_pauli_Z_ZZ_linear_r2_robust_raw_fold4.npz",
+      "sha256": "f2e3e8a4bb9227f065b9e2be4ab88e1d1fbe14723bbcfe27c6af6bd98286f6b4",
+      "bytes": 59978
+    },
+    {
+      "file": "kernel_pauli_Z_ZZ_ring_r1_robust_centered_normalized_fold0.npz",
+      "sha256": "1a3757af4ad3f8f0596263836fe9d713d9b33621f4a8c10f8440d304565533d8",
+      "bytes": 59297
+    },
+    {
+      "file": "kernel_pauli_Z_ZZ_ring_r1_robust_centered_normalized_fold1.npz",
+      "sha256": "ef439c5bf978ca801fc2936432b8dc033e83206e1bca6fb7df5595108b8ca3d4",
+      "bytes": 59275
+    },
+    {
+      "file": "kernel_pauli_Z_ZZ_ring_r1_robust_centered_normalized_fold2.npz",
+      "sha256": "151166081911f09b08cb52b07a9c85b5eab70a4042dfc4332166ebc75136f0dc",
+      "bytes": 59297
+    },
+    {
+      "file": "kernel_pauli_Z_ZZ_ring_r1_robust_centered_normalized_fold3.npz",
+      "sha256": "b68a6143ee7b5b1eecfe7d0fc4b3f319bee28a952881337748562601e54948f6",
+      "bytes": 59279
+    },
+    {
+      "file": "kernel_pauli_Z_ZZ_ring_r1_robust_centered_normalized_fold4.npz",
+      "sha256": "59dae09e6f98cef1706b7c3452444c5dd4e9dac1f94aa6f403e94be4a9c4ba59",
+      "bytes": 59289
+    },
+    {
+      "file": "kernel_pauli_Z_ZZ_ring_r1_robust_raw_fold0.npz",
+      "sha256": "910ec7b324094a301a2b82b27361fed1f75dc1597ee776db63bc97b13798d80d",
+      "bytes": 60331
+    },
+    {
+      "file": "kernel_pauli_Z_ZZ_ring_r1_robust_raw_fold1.npz",
+      "sha256": "44d967b31005c5d98dd688ef9f74897f8906bb20b4192a0689391e5f83e5aa17",
+      "bytes": 60267
+    },
+    {
+      "file": "kernel_pauli_Z_ZZ_ring_r1_robust_raw_fold2.npz",
+      "sha256": "a99e3c5710486fb79f6caa0573d650110f8f63e64fe3573da55d8241a135928f",
+      "bytes": 60343
+    },
+    {
+      "file": "kernel_pauli_Z_ZZ_ring_r1_robust_raw_fold3.npz",
+      "sha256": "41c37ac94eef4dd65c528dc1bfdb88cf1ee2a5bc92d14df5eb127b3653cbfc6e",
+      "bytes": 60295
+    },
+    {
+      "file": "kernel_pauli_Z_ZZ_ring_r1_robust_raw_fold4.npz",
+      "sha256": "078d7e6a962b2e7680320690adfed9f21d0f718bc30e42b811a7636889fc9a4c",
+      "bytes": 60358
+    },
+    {
+      "file": "locked_holdout_raw.csv",
+      "sha256": "40458ab39708ce8328c576d6b368866387ee7ecf23d0ead9edff5704a1fc2f8c",
+      "bytes": 107250
+    },
+    {
+      "file": "pauli_all_fold_metrics.csv",
+      "sha256": "9a23a301bb8fb9ac2be0d42265b5891edba1bc77aa10631ad4b377cd4044b244",
+      "bytes": 11004
+    },
+    {
+      "file": "pauli_baseline_boxed.html",
+      "sha256": "417c4f82d66609918aa271907a1b9b259d705e38f5e85a8382849d53ae14e8e6",
+      "bytes": 6552
+    },
+    {
+      "file": "pauli_baseline_decomposed.qasm",
+      "sha256": "24d800529904c671445b2cb1709b57ac6230fbd295c9f5af07423bf15116c8b9",
+      "bytes": 413
+    },
+    {
+      "file": "pauli_circuit_resources.csv",
+      "sha256": "7d87be3349de47381ccf9fff8ef8bf930ef6f937083873a3afef66e9401f2b9b",
+      "bytes": 668
+    },
+    {
+      "file": "pauli_cv_summary.csv",
+      "sha256": "0a17d7b9f1e5bc06bfadca2227c346560a69c4fb74b2c3e40fe03e5e3ca36113",
+      "bytes": 1999
+    },
+    {
+      "file": "pauli_global_kernels.npz",
+      "sha256": "c6affbe6f382be2961435872f70a8b89722d7cb08f95000a381ed3d36282a1dc",
+      "bytes": 351612
+    },
+    {
+      "file": "pauli_inner_c_search.csv",
+      "sha256": "a0d3f2955707eb53be7198184b55553142a2c7f2aef2639c4eadedeb9e69951c",
+      "bytes": 42726
+    },
+    {
+      "file": "pauli_kernel_geometry.csv",
+      "sha256": "10eeac049bbbd69df2cd4808a49ee5150a91f829bdc34e5a667b72644b76f25a",
+      "bytes": 2138
+    },
+    {
+      "file": "pauli_oof_predictions.csv",
+      "sha256": "679aa60a3679c05228927750318cbd714565caf003326efe1ece3fe12b15d664",
+      "bytes": 70849
+    },
+    {
+      "file": "pauli_shot_sensitivity.csv",
+      "sha256": "025265318b9da512300bb5d9fae20bb6a76b42c5997b7cdf50fe3ca1556cf10f",
+      "bytes": 5960
+    },
+    {
+      "file": "pauli_shot_sensitivity_summary.csv",
+      "sha256": "237d5733dca896d7ea30ed5779a77837d6e0a5995c517962bdcf0cb871221664",
+      "bytes": 797
+    },
+    {
+      "file": "pytket_pauli_quantum80_folds.csv",
+      "sha256": "c08e781838798951f1d1ac20a0c709798de925de781a6c0ef431aa8b5fbc6eb1",
+      "bytes": 974
+    },
+    {
+      "file": "pytket_pauli_quantum80_raw.csv",
+      "sha256": "f3fec99f69d409835755d18f5a0b5819d7534436e3a8ae95fab5737ba36c7047",
+      "bytes": 13254
+    },
+    {
+      "file": "pytket_pauli_quantum80_selected.csv",
+      "sha256": "044ee30ec5b48eae9bbc10126bebf1b62d1a2d01880b4faecbfc870f483f3a45",
+      "bytes": 7438
+    },
+    {
+      "file": "pytket_pauli_reproducibility_checks.csv",
+      "sha256": "d210ba6b3719e72c1bcca61d5ba9a42041a3afbdbda9f5277bb6013fd4abaf6a",
+      "bytes": 425
+    },
+    {
+      "file": "quantum_candidate_pool_raw.csv",
+      "sha256": "67eaee8aa98511733273d92f3b4c37e6d79563774a25380f3b9dd46ba153e147",
+      "bytes": 106855
+    },
+    {
+      "file": "selected_features.json",
+      "sha256": "c0eaf2d57622d222bcf91afb87bb154acc69fb10592a58e508fcc3755fc81ecf",
+      "bytes": 2257
+    },
+    {
+      "file": "selected_pauli_configuration.json",
+      "sha256": "8269c41c173f4e78add2bfcb9ab1cdc976dab24d891cfe3baf23e22c1cf32f8e",
+      "bytes": 780
+    },
+    {
+      "file": "selector_pool_raw.csv",
+      "sha256": "14a15ad61968e260591546109142be8912576352a55256cf1726ba7f58326fb2",
+      "bytes": 320292
+    },
+    {
+      "file": "spectrum_pauli_XZ_XXZZ_linear_r1_robust_centered_normalized.png",
+      "sha256": "ed99dccfa88a4ff61e565c6aa1c4e8e2c37f539c0d3c90b37f614d31898d5c40",
+      "bytes": 49933
+    },
+    {
+      "file": "spectrum_pauli_XZ_XXZZ_linear_r1_robust_raw.png",
+      "sha256": "03939413913e07509ea65d219b850da353a34353d048384f4bf7906d4bb4fec3",
+      "bytes": 47969
+    },
+    {
+      "file": "spectrum_pauli_Z_ZZ_linear_r1_minmax_centered_normalized.png",
+      "sha256": "70e727953b464b24fa6d9c10ae37f201da1d7426238e509c564f565e2719b8bb",
+      "bytes": 49236
+    },
+    {
+      "file": "spectrum_pauli_Z_ZZ_linear_r1_minmax_raw.png",
+      "sha256": "e71b725ea39d3ea572a908ea1631e367d5ff2dd5cad313ca2aae1bba41c3cae5",
+      "bytes": 47044
+    },
+    {
+      "file": "spectrum_pauli_Z_ZZ_linear_r1_robust_centered_normalized.png",
+      "sha256": "7be08be9880a19f7bcbfa45a3900d5d741b20ef0c7f6509d19f1d5dce2ad65e4",
+      "bytes": 49443
+    },
+    {
+      "file": "spectrum_pauli_Z_ZZ_linear_r1_robust_raw.png",
+      "sha256": "4f39ea08233b3cbe9ff434863fcfa8e7a56f6ac423c02c6a237a2b105ae3daa0",
+      "bytes": 46474
+    },
+    {
+      "file": "spectrum_pauli_Z_ZZ_linear_r2_robust_centered_normalized.png",
+      "sha256": "e6a7f578304b96a00da6d3cfd96d5aff04d3646dc3b8bc036cc79286d72fe65c",
+      "bytes": 50392
+    },
+    {
+      "file": "spectrum_pauli_Z_ZZ_linear_r2_robust_raw.png",
+      "sha256": "041ae1a47979ae8d455eae88a6c1f99fe45f2d55fba16d42aee200abb3d614a8",
+      "bytes": 40961
+    },
+    {
+      "file": "spectrum_pauli_Z_ZZ_ring_r1_robust_centered_normalized.png",
+      "sha256": "50ce1f1510b27ebfbadc64ed538afe6ffbf02a3aa7164b9a2ab90d4b99d9d915",
+      "bytes": 47670
+    },
+    {
+      "file": "spectrum_pauli_Z_ZZ_ring_r1_robust_raw.png",
+      "sha256": "e7085ab6df18a18419b81d9f10ce717bf65bda0ae3889ef100fb0b0e94cf0df0",
+      "bytes": 45434
+    },
+    {
+      "file": "split_assignments.csv",
+      "sha256": "f60086a70d2ddda93a915d30c7c6fab1af2b6b3020e52915c02e0bf12fe182b4",
+      "bytes": 67703
+    },
+    {
+      "file": "water_potability_input_snapshot.csv",
+      "sha256": "904004bde729bfe3d2e195f46343bceead09e32a0eb95bb8184e7e20e029b2bf",
+      "bytes": 525187
+    }
+  ]
+}

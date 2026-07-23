@@ -1,0 +1,90 @@
+{
+  "dataset": {
+    "path_at_execution": "/content/drive/MyDrive/Colab Notebooks/water_potability.csv",
+    "sha256": "904004bde729bfe3d2e195f46343bceead09e32a0eb95bb8184e7e20e029b2bf",
+    "rows": 3276,
+    "features": [
+      "ph",
+      "Hardness",
+      "Solids",
+      "Chloramines",
+      "Sulfate",
+      "Conductivity",
+      "Organic_carbon",
+      "Trihalomethanes",
+      "Turbidity"
+    ],
+    "target": "Potability"
+  },
+  "split": {
+    "holdout_seed": 20260721,
+    "training_rows": 2620,
+    "holdout_rows": 656
+  },
+  "corrected_full_svm": {
+    "params": {
+      "C": 18.57623345650744,
+      "gamma": 0.1
+    },
+    "pipeline": [
+      "median_imputer",
+      "standard_scaler",
+      "SMOTE_training_only",
+      "SVC_RBF"
+    ],
+    "decision_threshold": 0.0,
+    "metrics": {
+      "accuracy": 0.6509146341463414,
+      "precision": 0.5498154981549815,
+      "recall": 0.58203125,
+      "f1": 0.5654648956356736,
+      "specificity": 0.695,
+      "balanced_accuracy": 0.6385156249999999,
+      "mcc": 0.2744503125775166,
+      "average_precision": 0.5897855497987363,
+      "roc_auc": 0.695947265625,
+      "tn": 278,
+      "fp": 122,
+      "fn": 107,
+      "tp": 149
+    },
+    "note": "This full model is a corrected reproduction of the simple Gemini-style experiment; it is not yet the final SVM-QSVM benchmark."
+  },
+  "subset64": {
+    "selection_seed": 6403,
+    "fold_seed": 6411,
+    "rows": 64,
+    "class_counts": {
+      "0": 32,
+      "1": 32
+    },
+    "raw_csv_sha256": "18f3d62479ec83437de682b4a8b1cb0999ce2cb20f831d82564dca022a258f26",
+    "fold_csv_sha256": "9865e4d97868a7c93c96094062ddb3cd4fd82075a9cede748978b0455f96b98a"
+  },
+  "checks": {
+    "split_before_preprocessing": true,
+    "label_used_for_imputation": false,
+    "smote_applied_to_full_dataset": false,
+    "smote_scope": "training_only_inside_full_svm_pipeline",
+    "holdout_contains_only_original_rows": true,
+    "subset64_source": "training_pool_only",
+    "subset64_contains_synthetic_rows": false,
+    "subset64_balanced_32_32": true,
+    "subset64_overlap_with_holdout": false,
+    "folds": 4,
+    "validation_size_per_fold": 16,
+    "training_size_per_fold": 48,
+    "validation_class_count_per_fold": {
+      "0": 8,
+      "1": 8
+    },
+    "future_preprocessing_rule": "fit imputer and scaler only on the 48 training rows of each outer fold"
+  },
+  "environment": {
+    "python": "3.12.13",
+    "numpy": "2.0.2",
+    "pandas": "2.2.2",
+    "scikit_learn": "1.6.1",
+    "imbalanced_learn": "0.14.2"
+  }
+}

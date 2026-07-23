@@ -1,0 +1,4 @@
+name,reps,topology,alpha,n_qubits,depth,two_qubit_depth,cx_count,two_qubit_gate_count,total_gate_count
+pytket_linear_r1,1,linear,1.0,5,15,8,8,8,27
+pytket_ring_r1,1,ring,1.0,5,18,10,10,10,30
+pytket_linear_r2,2,linear,1.0,5,23,12,16,16,49

@@ -1,0 +1,101 @@
+{
+  "seeds": {
+    "split": 20260801,
+    "selector_split": 20260802,
+    "feature_cv": 20260803,
+    "feature_audit": 20260804,
+    "quantum_sample": 20260805,
+    "outer_folds": 20260806,
+    "inner_folds": 20260807,
+    "shots": 20260808
+  },
+  "n_qubits": 5,
+  "quantum_rows": 80,
+  "outer_folds": 5,
+  "inner_folds": 3,
+  "selected_features": [
+    "Sulfate",
+    "ph",
+    "Solids",
+    "Chloramines",
+    "Hardness"
+  ],
+  "maps": [
+    {
+      "name": "pauli_Z_ZZ_linear_r1_robust",
+      "local_terms": [
+        "Z"
+      ],
+      "pair_terms": [
+        "ZZ"
+      ],
+      "reps": 1,
+      "topology": "linear",
+      "scaling": "robust_atan",
+      "alpha": 1.0
+    },
+    {
+      "name": "pauli_Z_ZZ_ring_r1_robust",
+      "local_terms": [
+        "Z"
+      ],
+      "pair_terms": [
+        "ZZ"
+      ],
+      "reps": 1,
+      "topology": "ring",
+      "scaling": "robust_atan",
+      "alpha": 1.0
+    },
+    {
+      "name": "pauli_XZ_XXZZ_linear_r1_robust",
+      "local_terms": [
+        "X",
+        "Z"
+      ],
+      "pair_terms": [
+        "XX",
+        "ZZ"
+      ],
+      "reps": 1,
+      "topology": "linear",
+      "scaling": "robust_atan",
+      "alpha": 1.0
+    },
+    {
+      "name": "pauli_Z_ZZ_linear_r2_robust",
+      "local_terms": [
+        "Z"
+      ],
+      "pair_terms": [
+        "ZZ"
+      ],
+      "reps": 2,
+      "topology": "linear",
+      "scaling": "robust_atan",
+      "alpha": 1.0
+    },
+    {
+      "name": "pauli_Z_ZZ_linear_r1_minmax",
+      "local_terms": [
+        "Z"
+      ],
+      "pair_terms": [
+        "ZZ"
+      ],
+      "reps": 1,
+      "topology": "linear",
+      "scaling": "minmax",
+      "alpha": 1.0
+    }
+  ],
+  "kernel_modes": [
+    "raw",
+    "centered_normalized"
+  ],
+  "c_grid": [
+    0.1,
+    1.0,
+    10.0
+  ]
+}
