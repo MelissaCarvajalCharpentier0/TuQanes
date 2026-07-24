@@ -1,0 +1,13 @@
+check,passed
+only_dataset_as_external_input,True
+dataset_snapshot_hash_matches,True
+all_primary_splits_disjoint,True
+feature_selection_independent_of_quantum_rows,True
+feature_selection_independent_of_holdout,True
+feature_count_matches_qubits,True
+quantum80_balanced,True
+five_folds_balanced_8_8,True
+quantum80_has_no_holdout_rows,True
+no_qiskit_imported,True
+uses_pauliexpbox,True
+holdout_evaluated_after_map_selection,True

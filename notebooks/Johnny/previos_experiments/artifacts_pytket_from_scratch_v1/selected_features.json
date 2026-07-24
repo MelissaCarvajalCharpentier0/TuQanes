@@ -1,0 +1,17 @@
+{
+  "method": "ExtraTreesClassifier feature_importances_",
+  "trained_only_on": "selector_pool",
+  "n_qubits": 5,
+  "selected_features": [
+    "Conductivity",
+    "ph",
+    "Sulfate",
+    "Hardness",
+    "Chloramines"
+  ],
+  "model": {
+    "n_estimators": 500,
+    "random_state": 20260724,
+    "class_weight": "balanced"
+  }
+}

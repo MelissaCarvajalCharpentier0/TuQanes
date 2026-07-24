@@ -1,0 +1,77 @@
+{
+  "method": "5-fold held-out permutation importance with ExtraTrees",
+  "trained_only_on": "selector_pool",
+  "n_qubits": 5,
+  "selected_features": [
+    "Sulfate",
+    "ph",
+    "Solids",
+    "Chloramines",
+    "Hardness"
+  ],
+  "ranking": [
+    {
+      "feature": "Sulfate",
+      "top5_frequency": 1.0,
+      "permutation_mean": 0.054099786053637876,
+      "permutation_std_across_folds": 0.03063216259122059,
+      "impurity_mean": 0.12724563748298484
+    },
+    {
+      "feature": "ph",
+      "top5_frequency": 1.0,
+      "permutation_mean": 0.044615217728188425,
+      "permutation_std_across_folds": 0.015936446422981924,
+      "impurity_mean": 0.1272372806501943
+    },
+    {
+      "feature": "Solids",
+      "top5_frequency": 1.0,
+      "permutation_mean": 0.032012650561259945,
+      "permutation_std_across_folds": 0.013982941687640926,
+      "impurity_mean": 0.11802768976153004
+    },
+    {
+      "feature": "Chloramines",
+      "top5_frequency": 1.0,
+      "permutation_mean": 0.027472732671108235,
+      "permutation_std_across_folds": 0.003969773386683526,
+      "impurity_mean": 0.11527087895376997
+    },
+    {
+      "feature": "Hardness",
+      "top5_frequency": 1.0,
+      "permutation_mean": 0.022854614940942753,
+      "permutation_std_across_folds": 0.014263037311851556,
+      "impurity_mean": 0.11502947274543174
+    },
+    {
+      "feature": "Trihalomethanes",
+      "top5_frequency": 0.0,
+      "permutation_mean": 0.006690187744088775,
+      "permutation_std_across_folds": 0.00873740793431488,
+      "impurity_mean": 0.09964761982496988
+    },
+    {
+      "feature": "Conductivity",
+      "top5_frequency": 0.0,
+      "permutation_mean": 0.005898661556672859,
+      "permutation_std_across_folds": 0.009587929102235208,
+      "impurity_mean": 0.10384985034984233
+    },
+    {
+      "feature": "Turbidity",
+      "top5_frequency": 0.0,
+      "permutation_mean": 0.003804665089060835,
+      "permutation_std_across_folds": 0.014746308148226441,
+      "impurity_mean": 0.0962916293067809
+    },
+    {
+      "feature": "Organic_carbon",
+      "top5_frequency": 0.0,
+      "permutation_mean": -0.0029395629643599332,
+      "permutation_std_across_folds": 0.005076982942168122,
+      "impurity_mean": 0.09739994092449597
+    }
+  ]
+}

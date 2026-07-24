@@ -1,0 +1,3 @@
+{"map": "custom_water_domain_r1_robust", "chunk": 0, "job_name": "tq-pilot16-strict-v1-custom-r1-compile-000", "job_id": "0d55eb98-01a6-46f3-8e6a-14cf5e498092", "programs": 120}
+{"map": "zz_ring_r2_robust", "chunk": 0, "job_name": "tq-pilot16-strict-v1-zz-ring-r2-compile-000", "job_id": "bb3de722-e51d-4160-8682-c78c912688e5", "programs": 120}
+{"map": "pauli_z_zz_linear_r1_robust", "chunk": 0, "job_name": "tq-pilot16-strict-v1-pauli-z-zz-linear-r1-compile-000", "job_id": "61bc2018-3bdb-4d7f-aaa5-402b40a9f72d", "programs": 120}

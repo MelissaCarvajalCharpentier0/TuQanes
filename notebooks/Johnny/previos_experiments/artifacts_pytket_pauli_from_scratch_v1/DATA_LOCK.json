@@ -1,0 +1,163 @@
+{
+  "only_external_input": "water_potability.csv",
+  "dataset_sha256": "904004bde729bfe3d2e195f46343bceead09e32a0eb95bb8184e7e20e029b2bf",
+  "run_config_sha256": "3eded569c3e7cac72f7531a6b51611d556b9bcc6a3950966e22d5713c50fe006",
+  "run_config": {
+    "seeds": {
+      "split": 20260801,
+      "selector_split": 20260802,
+      "feature_cv": 20260803,
+      "feature_audit": 20260804,
+      "quantum_sample": 20260805,
+      "outer_folds": 20260806,
+      "inner_folds": 20260807,
+      "shots": 20260808
+    },
+    "n_qubits": 5,
+    "quantum_rows": 80,
+    "outer_folds": 5,
+    "inner_folds": 3,
+    "selected_features": [
+      "Sulfate",
+      "ph",
+      "Solids",
+      "Chloramines",
+      "Hardness"
+    ],
+    "maps": [
+      {
+        "name": "pauli_Z_ZZ_linear_r1_robust",
+        "local_terms": [
+          "Z"
+        ],
+        "pair_terms": [
+          "ZZ"
+        ],
+        "reps": 1,
+        "topology": "linear",
+        "scaling": "robust_atan",
+        "alpha": 1.0
+      },
+      {
+        "name": "pauli_Z_ZZ_ring_r1_robust",
+        "local_terms": [
+          "Z"
+        ],
+        "pair_terms": [
+          "ZZ"
+        ],
+        "reps": 1,
+        "topology": "ring",
+        "scaling": "robust_atan",
+        "alpha": 1.0
+      },
+      {
+        "name": "pauli_XZ_XXZZ_linear_r1_robust",
+        "local_terms": [
+          "X",
+          "Z"
+        ],
+        "pair_terms": [
+          "XX",
+          "ZZ"
+        ],
+        "reps": 1,
+        "topology": "linear",
+        "scaling": "robust_atan",
+        "alpha": 1.0
+      },
+      {
+        "name": "pauli_Z_ZZ_linear_r2_robust",
+        "local_terms": [
+          "Z"
+        ],
+        "pair_terms": [
+          "ZZ"
+        ],
+        "reps": 2,
+        "topology": "linear",
+        "scaling": "robust_atan",
+        "alpha": 1.0
+      },
+      {
+        "name": "pauli_Z_ZZ_linear_r1_minmax",
+        "local_terms": [
+          "Z"
+        ],
+        "pair_terms": [
+          "ZZ"
+        ],
+        "reps": 1,
+        "topology": "linear",
+        "scaling": "minmax",
+        "alpha": 1.0
+      }
+    ],
+    "kernel_modes": [
+      "raw",
+      "centered_normalized"
+    ],
+    "c_grid": [
+      0.1,
+      1.0,
+      10.0
+    ]
+  },
+  "locked_files": [
+    {
+      "file": "water_potability_input_snapshot.csv",
+      "sha256": "904004bde729bfe3d2e195f46343bceead09e32a0eb95bb8184e7e20e029b2bf",
+      "bytes": 525187
+    },
+    {
+      "file": "selector_pool_raw.csv",
+      "sha256": "14a15ad61968e260591546109142be8912576352a55256cf1726ba7f58326fb2",
+      "bytes": 320292
+    },
+    {
+      "file": "quantum_candidate_pool_raw.csv",
+      "sha256": "67eaee8aa98511733273d92f3b4c37e6d79563774a25380f3b9dd46ba153e147",
+      "bytes": 106855
+    },
+    {
+      "file": "locked_holdout_raw.csv",
+      "sha256": "40458ab39708ce8328c576d6b368866387ee7ecf23d0ead9edff5704a1fc2f8c",
+      "bytes": 107250
+    },
+    {
+      "file": "split_assignments.csv",
+      "sha256": "f60086a70d2ddda93a915d30c7c6fab1af2b6b3020e52915c02e0bf12fe182b4",
+      "bytes": 67703
+    },
+    {
+      "file": "feature_stability_folds.csv",
+      "sha256": "7c529311df00ec907291b74a81ed93dfc3da01ff41eb8c13a697dfa08dc0304e",
+      "bytes": 3493
+    },
+    {
+      "file": "feature_stability_summary.csv",
+      "sha256": "c4b11e987c9d5623bf6ef19b77338adf190ad2fce1a47abd4557d0d99a3ce3a8",
+      "bytes": 768
+    },
+    {
+      "file": "selected_features.json",
+      "sha256": "c0eaf2d57622d222bcf91afb87bb154acc69fb10592a58e508fcc3755fc81ecf",
+      "bytes": 2257
+    },
+    {
+      "file": "pytket_pauli_quantum80_raw.csv",
+      "sha256": "f3fec99f69d409835755d18f5a0b5819d7534436e3a8ae95fab5737ba36c7047",
+      "bytes": 13254
+    },
+    {
+      "file": "pytket_pauli_quantum80_selected.csv",
+      "sha256": "044ee30ec5b48eae9bbc10126bebf1b62d1a2d01880b4faecbfc870f483f3a45",
+      "bytes": 7438
+    },
+    {
+      "file": "pytket_pauli_quantum80_folds.csv",
+      "sha256": "c08e781838798951f1d1ac20a0c709798de925de781a6c0ef431aa8b5fbc6eb1",
+      "bytes": 974
+    }
+  ]
+}

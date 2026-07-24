@@ -1,0 +1,2 @@
+feature_set,n_features,features,C,gamma,accuracy_mean,accuracy_std,precision_mean,precision_std,recall_mean,recall_std,f1_mean,f1_std,specificity_mean,specificity_std,balanced_accuracy_mean,balanced_accuracy_std,mcc_mean,mcc_std
+chem5_v01,5,Sulfate|ph|Conductivity|Chloramines|Hardness,10.0,0.01,0.5375,0.121834929310112,0.5357142857142858,0.1237179148263483,0.65,0.2053959590644373,0.5772727272727273,0.1334538023263927,0.425,0.2436698586202241,0.5375,0.121834929310112,0.0748023684660515,0.2438729403974338

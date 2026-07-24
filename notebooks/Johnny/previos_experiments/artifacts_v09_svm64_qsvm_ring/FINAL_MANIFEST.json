@@ -1,0 +1,105 @@
+{
+  "project": "Challenge 2 — full SVM + same SVM/QSVM on locked 64",
+  "source_notebooks": {
+    "classical": "Gemini_TEST_Corrected_Artifacts_V2.ipynb",
+    "pytket": "V08_Challenge2_pytket_PauliFeatureMap_From_Scratch.ipynb"
+  },
+  "dataset": {
+    "path_at_execution": "/content/drive/MyDrive/Colab Notebooks/water_potability.csv",
+    "sha256": "904004bde729bfe3d2e195f46343bceead09e32a0eb95bb8184e7e20e029b2bf",
+    "rows": 3276,
+    "features": [
+      "ph",
+      "Hardness",
+      "Solids",
+      "Chloramines",
+      "Sulfate",
+      "Conductivity",
+      "Organic_carbon",
+      "Trihalomethanes",
+      "Turbidity"
+    ],
+    "target": "Potability"
+  },
+  "full_svm": {
+    "params": {
+      "C": 1.2519747115129674,
+      "gamma": 0.09539784477077082,
+      "geometry_neighbors": 5
+    },
+    "thresholds": {
+      "default_zero": 0.0,
+      "max_f1_v3": -0.9516512901090459,
+      "safety_recommended": -0.3032644845043456
+    },
+    "final_model_seed": 10042,
+    "observed_holdout_f1_max_f1_v3": 0.6296809986130375
+  },
+  "subset64": {
+    "raw_sha256": "18f3d62479ec83437de682b4a8b1cb0999ce2cb20f831d82564dca022a258f26",
+    "folds_sha256": "9865e4d97868a7c93c96094062ddb3cd4fd82075a9cede748978b0455f96b98a",
+    "rows": 64,
+    "class_counts": {
+      "0": 32,
+      "1": 32
+    },
+    "folds": 4
+  },
+  "quantum": {
+    "config": {
+      "name": "pauli_Z_ZZ_ring_r1_robust",
+      "local_terms": [
+        "Z"
+      ],
+      "pair_terms": [
+        "ZZ"
+      ],
+      "reps": 1,
+      "topology": "ring",
+      "scaling": "robust_atan",
+      "alpha": 1.0
+    },
+    "n_qubits": 9,
+    "features": [
+      "ph",
+      "Hardness",
+      "Solids",
+      "Chloramines",
+      "Sulfate",
+      "Conductivity",
+      "Organic_carbon",
+      "Trihalomethanes",
+      "Turbidity"
+    ],
+    "kernel_mode": "centered_normalized",
+    "C": 10.0
+  },
+  "checks": {
+    "dataset_has_3276_rows": true,
+    "split_before_preprocessing": true,
+    "holdout_not_used_for_selection": true,
+    "full_model_uses_frozen_params": true,
+    "full_holdout_f1_gate_passed": true,
+    "raw64_hash_matches": true,
+    "folds64_hash_matches": true,
+    "subset64_balanced_32_32": true,
+    "subset64_training_pool_only": true,
+    "subset64_no_holdout_overlap": true,
+    "four_folds_are_8_8": true,
+    "classical64_is_exact_same_pipeline": true,
+    "one_quantum_map_only": true,
+    "quantum_uses_all_9_original_features": true,
+    "quantum_preprocessing_is_fold_local": true,
+    "quantum_C_is_frozen": true,
+    "quantum_kernel_mode_is_frozen": true,
+    "no_qiskit_imported": true
+  },
+  "environment": {
+    "python": "3.12.13",
+    "numpy": "2.0.2",
+    "pandas": "2.2.2",
+    "scikit_learn": "1.6.1",
+    "imbalanced_learn": "0.14.2",
+    "pytket": "2.18.1"
+  }
+}

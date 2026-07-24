@@ -1,0 +1,30 @@
+{
+  "selected_candidate": "optuna_trial_46",
+  "selected_params": {
+    "feature_mode": "none",
+    "imputer": "median",
+    "winsor_mode": "none",
+    "scaler": "standard",
+    "local_geometry": "density_anomaly",
+    "geometry_neighbors": 5,
+    "sampling_strategy_name": "tomek",
+    "C": 1.2519747115129674,
+    "gamma": 0.09539784477077082
+  },
+  "max_f1_threshold": -0.9516512901090459,
+  "safety_threshold": -0.3032644845043456,
+  "minimum_safety_specificity": 0.75,
+  "reference_holdout_seed": 20260721,
+  "feature_order": [
+    "ph",
+    "Hardness",
+    "Solids",
+    "Chloramines",
+    "Sulfate",
+    "Conductivity",
+    "Organic_carbon",
+    "Trihalomethanes",
+    "Turbidity"
+  ],
+  "selection_rule": "highest safety-F1 shortlist, then lowest complexity, then highest average precision"
+}

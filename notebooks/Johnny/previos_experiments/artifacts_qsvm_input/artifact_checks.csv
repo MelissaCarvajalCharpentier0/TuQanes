@@ -1,0 +1,15 @@
+check,value
+split_before_preprocessing,true
+label_used_for_imputation,false
+smote_applied_to_full_dataset,false
+smote_scope,"""training_only_inside_full_svm_pipeline"""
+holdout_contains_only_original_rows,true
+subset64_source,"""training_pool_only"""
+subset64_contains_synthetic_rows,false
+subset64_balanced_32_32,true
+subset64_overlap_with_holdout,false
+folds,4
+validation_size_per_fold,16
+training_size_per_fold,48
+validation_class_count_per_fold,"{""0"": 8, ""1"": 8}"
+future_preprocessing_rule,"""fit imputer and scaler only on the 48 training rows of each outer fold"""

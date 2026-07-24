@@ -1,0 +1,243 @@
+{
+  "config": {
+    "subset_n": 64,
+    "subset_seed": 20260807,
+    "split_seed": 20260801,
+    "preprocessing_protocol": "global_median_external_pool",
+    "shots": 4096,
+    "repeats": 3,
+    "backend_name": "H2-1LE",
+    "project_name": "TuQanes-QSVM-Nexus",
+    "run_id": "pilot16-strict-v1",
+    "max_programs_per_job": 300,
+    "nexus_stage": "collect",
+    "quota_acknowledgement": "I_ACCEPT_NEXUS_QUOTA_USAGE"
+  },
+  "features": [
+    "Sulfate",
+    "ph",
+    "Conductivity",
+    "Chloramines",
+    "Hardness"
+  ],
+  "feature_set": "chem5_v01",
+  "locked_maps": {
+    "custom_water_domain_r1_robust": {
+      "name": "custom_water_domain_r1_robust",
+      "family": "custom_water_domain",
+      "scaling": "robust_atan",
+      "reps": 1,
+      "topology": "domain",
+      "alpha": 0.9,
+      "local_terms": [
+        "Z"
+      ],
+      "pair_terms": [
+        "ZZ"
+      ],
+      "data_reupload": false
+    },
+    "zz_ring_r2_robust": {
+      "name": "zz_ring_r2_robust",
+      "family": "ZZFeatureMap",
+      "scaling": "robust_atan",
+      "reps": 2,
+      "topology": "ring",
+      "alpha": 0.8,
+      "local_terms": [
+        "Z"
+      ],
+      "pair_terms": [
+        "ZZ"
+      ],
+      "data_reupload": false
+    },
+    "pauli_z_zz_linear_r1_robust": {
+      "name": "pauli_z_zz_linear_r1_robust",
+      "family": "PauliFeatureMap",
+      "scaling": "robust_atan",
+      "reps": 1,
+      "topology": "linear",
+      "alpha": 0.8,
+      "local_terms": [
+        "Z"
+      ],
+      "pair_terms": [
+        "ZZ"
+      ],
+      "data_reupload": false
+    }
+  },
+  "locked_C": {
+    "custom_water_domain_r1_robust": 10.0,
+    "zz_ring_r2_robust": 0.1,
+    "pauli_z_zz_linear_r1_robust": 1.0
+  },
+  "locked_classical": {
+    "C": 10.0,
+    "gamma": 0.01,
+    "source": "artifacts_v1_2/quantum80_svm_cv_summary.csv"
+  },
+  "input_hashes": {
+    "water": "904004bde729bfe3d2e195f46343bceead09e32a0eb95bb8184e7e20e029b2bf",
+    "pool": "0e488b31a9c459945a258fb9ea7f98e57e4d925ff9588de4e0f86d417ba7e6a6",
+    "folds": "d3040efbb8989b59b0df83c163ddfab6391a83dc067a6303b08b3c718c9c1c66",
+    "pool_manifest": "f4f393991d3c4b78f6ebc0b066e5c94defd4ee4ff177c5789b28fbc4b4dd6c28",
+    "best_maps": "b18532c6867d49e06b294379b48ff3f5393b42d3403d4f1c5bcbf249368fecab",
+    "maps_manifest": "73ee8161ad08b2d89c71413ac683d76a7e5a48a711bfa9c232d56d5c020459aa",
+    "classical_grid": "06271ebb3ab853b46b1fa77ceb06af4c2434e7f46f3539837ff48655848a3994"
+  },
+  "preprocessing": {
+    "protocol": "global_median_external_pool",
+    "imputation_uses_evaluation_labels": false,
+    "scaler_fit_uses_evaluation_rows": false,
+    "development_rows": 2620,
+    "excluded_quantum_pool_rows": 80,
+    "preprocessor_fit_rows": 2540,
+    "holdout_rows": 656,
+    "holdout_intersection": 0,
+    "features": [
+      "Sulfate",
+      "ph",
+      "Conductivity",
+      "Chloramines",
+      "Hardness"
+    ],
+    "global_medians": {
+      "Sulfate": 331.8990654303499,
+      "ph": 6.992497752940629,
+      "Conductivity": 422.7089654538137,
+      "Chloramines": 7.131070155913374,
+      "Hardness": 197.29361047516772
+    },
+    "class_medians": {
+      "0": {
+        "Sulfate": 333.0630181996786,
+        "ph": 6.989627973671709,
+        "Conductivity": 424.99187594600585,
+        "Chloramines": 7.096262059191075,
+        "Hardness": 196.4773056255906
+      },
+      "1": {
+        "Sulfate": 329.0659717060797,
+        "ph": 7.003869548964651,
+        "Conductivity": 419.40896893212175,
+        "Chloramines": 7.189151835138728,
+        "Hardness": 198.34458173749923
+      }
+    },
+    "scaler_mean": [
+      332.7232323632081,
+      7.061581142648803,
+      426.7246731291375,
+      7.119196584632238,
+      196.4525343967616
+    ],
+    "scaler_scale": [
+      36.20108942475044,
+      1.4839246586591335,
+      80.80129606929684,
+      1.5818903461084706,
+      32.844221012393334
+    ],
+    "angle_transform": "(2/pi) * atan(z)"
+  },
+  "subset": {
+    "rows": 64,
+    "class_counts": {
+      "0": 32,
+      "1": 32
+    },
+    "fold_class_counts": {
+      "(0, 0)": 7,
+      "(0, 1)": 7,
+      "(1, 0)": 7,
+      "(1, 1)": 7,
+      "(2, 0)": 6,
+      "(2, 1)": 6,
+      "(3, 0)": 6,
+      "(3, 1)": 6,
+      "(4, 0)": 6,
+      "(4, 1)": 6
+    },
+    "source_indices": [
+      2696,
+      1735,
+      1410,
+      206,
+      130,
+      2109,
+      1029,
+      2407,
+      1980,
+      1953,
+      3238,
+      3125,
+      2787,
+      395,
+      1341,
+      3034,
+      2630,
+      2495,
+      491,
+      1321,
+      1805,
+      2851,
+      3198,
+      802,
+      715,
+      3138,
+      271,
+      336,
+      1770,
+      3037,
+      2665,
+      2251,
+      1288,
+      54,
+      284,
+      1485,
+      1084,
+      1942,
+      1579,
+      2717,
+      2701,
+      1478,
+      3087,
+      2097,
+      2631,
+      155,
+      3165,
+      300,
+      2731,
+      1137,
+      3253,
+      1152,
+      875,
+      2296,
+      1849,
+      1736,
+      1775,
+      3056,
+      1922,
+      2810,
+      1554,
+      1969,
+      304,
+      355
+    ]
+  },
+  "environment": {
+    "python": "3.11.10",
+    "numpy": "2.2.6",
+    "pandas": "2.2.3",
+    "scikit_learn": "1.5.2",
+    "pytket": "2.16.0",
+    "qnexus": "0.46.0"
+  },
+  "result_labels": {
+    "exact": "statevector local sin shots ni ruido",
+    "local_binomial_preview": "muestreo binomial local; no es Nexus ni H2",
+    "nexus": "reservado para counts descargados de Nexus"
+  }
+}

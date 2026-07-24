@@ -1,0 +1,9 @@
+samples,model,map,C,gamma,result_kind,f1_mean,f1_std,balanced_accuracy_mean,mcc_mean
+16,SVM-RBF clasica,locked_classical,10.0,0.01,local_exact,0.6666666667,0.4082482905,0.75,0.5154700538
+16,QSVM,custom_water_domain_r1_robust,10.0,,local_exact,0.2666666667,0.3651483717,0.45,-0.0845299462
+16,QSVM,zz_ring_r2_robust,0.1,,local_exact,0.66,0.1064581295,0.6,0.2309401077
+16,QSVM,pauli_z_zz_linear_r1_robust,1.0,,local_exact,0.2666666667,0.3651483717,0.4,-0.2
+64,SVM-RBF clasica,locked_classical,10.0,0.01,local_exact,0.3741147741,0.1400632635,0.4047619048,-0.1976435554
+64,QSVM,custom_water_domain_r1_robust,10.0,,local_exact,0.5230769231,0.3160457943,0.5833333333,0.1432248723
+64,QSVM,zz_ring_r2_robust,0.1,,local_exact,0.484981685,0.2739378214,0.5166666667,0.0188022957
+64,QSVM,pauli_z_zz_linear_r1_robust,1.0,,local_exact,0.4205128205,0.2408346215,0.5023809524,-0.0041076987

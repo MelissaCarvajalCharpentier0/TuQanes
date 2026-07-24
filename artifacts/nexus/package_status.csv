@@ -1,0 +1,2 @@
+component,present,executed_by_pipeline,note,contents
+TuQanes_Package_Nexus,True,False,Copiar a Nexus Lab y ejecutar por etapas (local_only/cost/submit/collect).,"Nexus_QSVM_top3_reproducible.ipynb, input, nexus_qsvm.py, requirements-nexus.txt"

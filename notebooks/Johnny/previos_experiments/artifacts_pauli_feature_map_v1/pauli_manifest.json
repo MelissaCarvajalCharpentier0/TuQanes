@@ -1,0 +1,218 @@
+{
+  "notebook": "V06_Challenge2_PauliFeatureMap_Study.ipynb",
+  "sdk": "Qiskit",
+  "qiskit_version": "2.2.3",
+  "qiskit_aer_version": "0.17.2",
+  "feature_map_constructor": "qiskit.circuit.library.pauli_feature_map",
+  "seed": 42,
+  "num_samples": 64,
+  "num_features": 9,
+  "num_qubits": 9,
+  "state_dimension": 512,
+  "folds": 4,
+  "outer_train_size": 48,
+  "outer_validation_size": 16,
+  "svc_kernel": "precomputed",
+  "kernel_definition": "|<phi(x_i)|phi(x_j)>|^2",
+  "c_grid": [
+    0.01,
+    0.1,
+    1.0,
+    10.0,
+    100.0
+  ],
+  "map_configs": [
+    {
+      "name": "P_Z_r1_linear_a2_minmax",
+      "paulis": [
+        "Z"
+      ],
+      "reps": 1,
+      "entanglement": "linear",
+      "alpha": 2.0,
+      "scaling": "minmax",
+      "group": "pauli_terms"
+    },
+    {
+      "name": "P_ZZ_r1_linear_a2_minmax",
+      "paulis": [
+        "ZZ"
+      ],
+      "reps": 1,
+      "entanglement": "linear",
+      "alpha": 2.0,
+      "scaling": "minmax",
+      "group": "pauli_terms"
+    },
+    {
+      "name": "P_Z_ZZ_r1_linear_a2_minmax",
+      "paulis": [
+        "Z",
+        "ZZ"
+      ],
+      "reps": 1,
+      "entanglement": "linear",
+      "alpha": 2.0,
+      "scaling": "minmax",
+      "group": "baseline"
+    },
+    {
+      "name": "P_X_XX_r1_linear_a2_minmax",
+      "paulis": [
+        "X",
+        "XX"
+      ],
+      "reps": 1,
+      "entanglement": "linear",
+      "alpha": 2.0,
+      "scaling": "minmax",
+      "group": "pauli_terms"
+    },
+    {
+      "name": "P_Y_YY_r1_linear_a2_minmax",
+      "paulis": [
+        "Y",
+        "YY"
+      ],
+      "reps": 1,
+      "entanglement": "linear",
+      "alpha": 2.0,
+      "scaling": "minmax",
+      "group": "pauli_terms"
+    },
+    {
+      "name": "P_X_Y_Z_r1_linear_a2_minmax",
+      "paulis": [
+        "X",
+        "Y",
+        "Z"
+      ],
+      "reps": 1,
+      "entanglement": "linear",
+      "alpha": 2.0,
+      "scaling": "minmax",
+      "group": "pauli_terms"
+    },
+    {
+      "name": "P_XYZ_XXYYZZ_r1_linear_a2_minmax",
+      "paulis": [
+        "X",
+        "Y",
+        "Z",
+        "XX",
+        "YY",
+        "ZZ"
+      ],
+      "reps": 1,
+      "entanglement": "linear",
+      "alpha": 2.0,
+      "scaling": "minmax",
+      "group": "pauli_terms"
+    },
+    {
+      "name": "P_Z_ZY_ZZ_r1_linear_a2_minmax",
+      "paulis": [
+        "Z",
+        "ZY",
+        "ZZ"
+      ],
+      "reps": 1,
+      "entanglement": "linear",
+      "alpha": 2.0,
+      "scaling": "minmax",
+      "group": "pauli_terms"
+    },
+    {
+      "name": "P_Z_ZZ_r2_linear_a2_minmax",
+      "paulis": [
+        "Z",
+        "ZZ"
+      ],
+      "reps": 2,
+      "entanglement": "linear",
+      "alpha": 2.0,
+      "scaling": "minmax",
+      "group": "reps"
+    },
+    {
+      "name": "P_Z_ZZ_r1_circular_a2_minmax",
+      "paulis": [
+        "Z",
+        "ZZ"
+      ],
+      "reps": 1,
+      "entanglement": "circular",
+      "alpha": 2.0,
+      "scaling": "minmax",
+      "group": "entanglement"
+    },
+    {
+      "name": "P_Z_ZZ_r1_full_a2_minmax",
+      "paulis": [
+        "Z",
+        "ZZ"
+      ],
+      "reps": 1,
+      "entanglement": "full",
+      "alpha": 2.0,
+      "scaling": "minmax",
+      "group": "entanglement"
+    },
+    {
+      "name": "P_Z_ZZ_r1_linear_a1_minmax",
+      "paulis": [
+        "Z",
+        "ZZ"
+      ],
+      "reps": 1,
+      "entanglement": "linear",
+      "alpha": 1.0,
+      "scaling": "minmax",
+      "group": "alpha"
+    },
+    {
+      "name": "P_Z_ZZ_r1_linear_a4_minmax",
+      "paulis": [
+        "Z",
+        "ZZ"
+      ],
+      "reps": 1,
+      "entanglement": "linear",
+      "alpha": 4.0,
+      "scaling": "minmax",
+      "group": "alpha"
+    },
+    {
+      "name": "P_Z_ZZ_r1_linear_a2_stdclip",
+      "paulis": [
+        "Z",
+        "ZZ"
+      ],
+      "reps": 1,
+      "entanglement": "linear",
+      "alpha": 2.0,
+      "scaling": "stdclip",
+      "group": "scaling"
+    },
+    {
+      "name": "P_Z_ZZ_r1_linear_a2_atan",
+      "paulis": [
+        "Z",
+        "ZZ"
+      ],
+      "reps": 1,
+      "entanglement": "linear",
+      "alpha": 2.0,
+      "scaling": "atan",
+      "group": "scaling"
+    }
+  ],
+  "best_exploratory_map": "P_X_XX_r1_linear_a2_minmax",
+  "best_exploratory_mean_f1": 0.6666666666666666,
+  "selection_warning": "Ranking exploratorio; múltiples mapas fueron comparados sobre los mismos folds.",
+  "quick_mode": false,
+  "shot_study": true,
+  "noise_study": true,
+  "data_file": "/content/drive/MyDrive/Colab Notebooks/artifacts_qsvm_input_v2/qsvm_64_raw.csv",
+  "fold_file": "/content/drive/MyDrive/Colab Notebooks/artifacts_qsvm_input_v2/qsvm_64_folds.csv"
+}

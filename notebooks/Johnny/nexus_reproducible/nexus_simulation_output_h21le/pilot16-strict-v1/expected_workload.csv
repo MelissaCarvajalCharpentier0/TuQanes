@@ -1,0 +1,4 @@
+map,samples,unique_offdiagonal_pairs,compile_jobs,execute_jobs_per_repeat,repeats,total_execute_jobs,shots_per_circuit,total_requested_shots
+custom_water_domain_r1_robust,64,2016,7,7,3,21,4096,24772608
+zz_ring_r2_robust,64,2016,7,7,3,21,4096,24772608
+pauli_z_zz_linear_r1_robust,64,2016,7,7,3,21,4096,24772608

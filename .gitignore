@@ -1,0 +1,4 @@
+notebooks/Johnny/.venv/
+notebooks/Johnny/.pytket_config/
+.ipynb_checkpoints/
+**/.ipynb_checkpoints/

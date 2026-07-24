@@ -1,0 +1,27 @@
+{
+  "selected_trial_number": 20,
+  "selected_params": {
+    "imputer": "median",
+    "scaler": "power",
+    "balance_strategy": "smote_tomek",
+    "sampling_strategy": 0.8234281858502869,
+    "smote_k_neighbors": 5,
+    "C": 7.824520430340897,
+    "gamma": 0.05564284242478379
+  },
+  "f1_threshold": -0.973989492219218,
+  "safety_threshold": -0.2398795495559185,
+  "minimum_safety_specificity": 0.7,
+  "audit_test_seed": 20260721,
+  "feature_order": [
+    "ph",
+    "Hardness",
+    "Solids",
+    "Chloramines",
+    "Sulfate",
+    "Conductivity",
+    "Organic_carbon",
+    "Trihalomethanes",
+    "Turbidity"
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "selected_before_holdout": true,
+  "map": "pauli_Z_ZZ_ring_r1_robust",
+  "kernel_mode": "centered_normalized",
+  "C": 10.0,
+  "cv_metrics": {
+    "model": "quantum",
+    "map": "pauli_Z_ZZ_ring_r1_robust",
+    "kernel_mode": "centered_normalized",
+    "accuracy_mean": 0.575,
+    "accuracy_std": 0.027950849718747384,
+    "balanced_accuracy_mean": 0.575,
+    "balanced_accuracy_std": 0.027950849718747384,
+    "f1_mean": 0.5569568151147098,
+    "f1_std": 0.07144777395688429,
+    "mcc_mean": 0.15433125206495632,
+    "mcc_std": 0.053663281883385296
+  },
+  "config": {
+    "name": "pauli_Z_ZZ_ring_r1_robust",
+    "local_terms": [
+      "Z"
+    ],
+    "pair_terms": [
+      "ZZ"
+    ],
+    "reps": 1,
+    "topology": "ring",
+    "scaling": "robust_atan",
+    "alpha": 1.0
+  }
+}
