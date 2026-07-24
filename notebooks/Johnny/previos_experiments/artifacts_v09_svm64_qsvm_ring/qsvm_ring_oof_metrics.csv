@@ -1,0 +1,2 @@
+model,map,kernel_mode,C,evaluation,accuracy,precision,recall,f1,specificity,balanced_accuracy,mcc,tn,fp,fn,tp,average_precision,roc_auc
+qsvm_pytket,pauli_Z_ZZ_ring_r1_robust,centered_normalized,10.0,fixed_4fold_oof,0.578125,0.5757575757575758,0.59375,0.5846153846153846,0.5625,0.578125,0.1563263498701806,18,14,13,19,0.5937677712112102,0.607421875

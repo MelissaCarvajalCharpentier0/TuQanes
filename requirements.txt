@@ -1,0 +1,19 @@
+# Dependencias del punto de entrada reproducible (main.py) y notebooks.
+# El flujo principal (main.py) solo requiere el stack cientifico ligero;
+# pytket/qiskit/guppylang se listan para reproducir los notebooks y el paquete Nexus.
+
+numpy==2.5.1
+pandas==3.0.3
+scipy==1.18.0
+scikit-learn==1.9.0
+matplotlib==3.11.1
+seaborn==0.13.2
+
+# Notebooks e ingenieria cuantica (no requeridos por main.py):
+jupyter
+ipykernel
+nbformat==5.10.4
+pytket==2.18.1
+guppylang==0.21.16
+qiskit==2.5.0
+qiskit-aer==0.17.2

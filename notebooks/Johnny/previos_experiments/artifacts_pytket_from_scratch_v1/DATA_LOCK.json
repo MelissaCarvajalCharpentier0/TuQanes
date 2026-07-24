@@ -1,0 +1,58 @@
+{
+  "lock_version": 1,
+  "dataset_source_path": "/content/drive/MyDrive/Colab Notebooks/water_potability.csv",
+  "dataset_sha256": "904004bde729bfe3d2e195f46343bceead09e32a0eb95bb8184e7e20e029b2bf",
+  "only_external_input": "water_potability.csv",
+  "records": [
+    {
+      "file": "water_potability_input_snapshot.csv",
+      "sha256": "904004bde729bfe3d2e195f46343bceead09e32a0eb95bb8184e7e20e029b2bf",
+      "bytes": 525187
+    },
+    {
+      "file": "selector_pool_raw.csv",
+      "sha256": "aadce19f2661065f00c917ed0705d52c73fc17f87fa7149ea88d95da345224c9",
+      "bytes": 320553
+    },
+    {
+      "file": "quantum_candidate_pool_raw.csv",
+      "sha256": "73e4cdb1851b8d6d66480744400b44919385794213b5c8c466a7b432b85c6fb6",
+      "bytes": 106929
+    },
+    {
+      "file": "locked_holdout_raw.csv",
+      "sha256": "dcde9a943e25eb182c615c2d592cc514402c0bf7f6b544ebd5bd3a481cd4d119",
+      "bytes": 106915
+    },
+    {
+      "file": "split_assignments.csv",
+      "sha256": "03d6bfe05b2f06078a3586b635e203bb82f7c749aa6ad2666598c0e9038c5aaa",
+      "bytes": 67703
+    },
+    {
+      "file": "feature_importances.csv",
+      "sha256": "91ccf16b789da3f1e66abf391ce8412eea7ce74ebba94d63bb510cc7e337eb0c",
+      "bytes": 473
+    },
+    {
+      "file": "selected_features.json",
+      "sha256": "0dfca6e849994c07c28eb33d049f2e9ddd103599cff57cf1b929272476f97997",
+      "bytes": 327
+    },
+    {
+      "file": "pytket_quantum64_raw.csv",
+      "sha256": "fbab327ff3e797b7e0b1cfdf98af3fa3a7fe6b95153ab4c31bf305a0b9557880",
+      "bytes": 10627
+    },
+    {
+      "file": "pytket_quantum64_selected.csv",
+      "sha256": "fa90829649cfe85d51c9da1fc8eea9d1e1327055859dfaf0ac223585df464da0",
+      "bytes": 5977
+    },
+    {
+      "file": "pytket_quantum64_folds.csv",
+      "sha256": "011dc7fd71795cc0c0891661ff3e637dc754e5f115564749963926ce842261b2",
+      "bytes": 777
+    }
+  ]
+}

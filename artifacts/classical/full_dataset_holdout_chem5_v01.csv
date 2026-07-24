@@ -1,0 +1,2 @@
+accuracy,precision,recall,f1,specificity,balanced_accuracy,mcc,tn,fp,fn,tp,C,gamma,train_rows_before_balance,train_rows_after_balance,eval_rows,feature_set,n_features,features,cv_f1_mean,cv_balanced_accuracy_mean,cv_mcc_mean
+0.6554878048780488,0.5539568345323741,0.6015625,0.5767790262172284,0.69,0.64578125,0.2878149480660275,276,124,102,154,10.0,auto,2620,2044,656,chem5_v01,5,Sulfate|ph|Conductivity|Chloramines|Hardness,0.5573024835333258,0.6269540979477654,0.250233010532184

@@ -1,0 +1,41 @@
+{
+  "full_model": {
+    "params": {
+      "C": 1.2519747115129674,
+      "gamma": 0.09539784477077082,
+      "geometry_neighbors": 5
+    },
+    "thresholds": {
+      "default_zero": 0.0,
+      "max_f1_v3": -0.9516512901090459,
+      "safety_recommended": -0.3032644845043456
+    },
+    "holdout_seed": 20260721
+  },
+  "svm64": {
+    "selection_method": "fixed_stratified_random_from_training_pool",
+    "selection_seed": 6403,
+    "cv_seed": 6411,
+    "folds": 4,
+    "class_counts": {
+      "0": 32,
+      "1": 32
+    },
+    "features": [
+      "ph",
+      "Hardness",
+      "Solids",
+      "Chloramines",
+      "Sulfate",
+      "Conductivity",
+      "Organic_carbon",
+      "Trihalomethanes",
+      "Turbidity"
+    ],
+    "params": {
+      "C": 0.06286312440262014,
+      "gamma": 0.9805120710310026
+    },
+    "important_qsvm_rule": "La imputación y el escalado deben volver a ajustarse dentro de cada fold cuando se ejecute la comparación con QSVM."
+  }
+}

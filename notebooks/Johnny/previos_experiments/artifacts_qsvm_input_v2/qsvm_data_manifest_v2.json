@@ -1,0 +1,85 @@
+{
+  "dataset": {
+    "path_at_execution": "/content/drive/MyDrive/Colab Notebooks/water_potability.csv",
+    "sha256": "904004bde729bfe3d2e195f46343bceead09e32a0eb95bb8184e7e20e029b2bf",
+    "rows": 3276,
+    "features": [
+      "ph",
+      "Hardness",
+      "Solids",
+      "Chloramines",
+      "Sulfate",
+      "Conductivity",
+      "Organic_carbon",
+      "Trihalomethanes",
+      "Turbidity"
+    ],
+    "target": "Potability"
+  },
+  "split": {
+    "holdout_seed": 20260721,
+    "training_rows": 2620,
+    "holdout_rows": 656
+  },
+  "full_svm": {
+    "params": {
+      "C": 1.2519747115129674,
+      "gamma": 0.09539784477077082,
+      "geometry_neighbors": 5
+    },
+    "final_model_seed": 10042,
+    "pipeline": [
+      "median_imputer",
+      "standard_scaler",
+      "local_geometry_2_features",
+      "tomek_links_training_only",
+      "SVC_RBF"
+    ],
+    "thresholds": {
+      "default_zero": 0.0,
+      "max_f1_v3": -0.9516512901090459,
+      "safety_recommended": -0.3032644845043456
+    },
+    "challenge_policy": "max_f1_v3",
+    "challenge_f1": 0.6296809986130375,
+    "safety_policy": "safety_recommended",
+    "safety_specificity": 0.82
+  },
+  "subset64": {
+    "selection_seed": 6403,
+    "fold_seed": 6411,
+    "rows": 64,
+    "class_counts": {
+      "0": 32,
+      "1": 32
+    },
+    "raw_csv_sha256": "18f3d62479ec83437de682b4a8b1cb0999ce2cb20f831d82564dca022a258f26",
+    "fold_csv_sha256": "9865e4d97868a7c93c96094062ddb3cd4fd82075a9cede748978b0455f96b98a"
+  },
+  "checks": {
+    "split_before_preprocessing": true,
+    "label_used_for_imputation": false,
+    "holdout_used_for_parameter_selection": false,
+    "holdout_contains_only_original_rows": true,
+    "local_geometry_fit_scope": "training_only_inside_each_fit",
+    "tomek_scope": "training_only_inside_pipeline",
+    "frozen_threshold_source": "V3 training OOF; not selected on this holdout",
+    "f1_gate": 0.6,
+    "f1_gate_value": 0.6296809986130375,
+    "f1_gate_passed": true,
+    "subset64_source": "training_pool_only",
+    "subset64_contains_synthetic_rows": false,
+    "subset64_balanced_32_32": true,
+    "subset64_overlap_with_holdout": false,
+    "subset64_same_as_previous_version": true,
+    "folds_same_as_previous_version": true,
+    "future_preprocessing_rule": "Fit imputer, scaler and any dimensionality reduction only on the 48 training rows of each outer fold."
+  },
+  "environment": {
+    "python": "3.12.13",
+    "numpy": "2.0.2",
+    "pandas": "2.2.2",
+    "scikit_learn": "1.6.1",
+    "imbalanced_learn": "0.14.2"
+  }
+}

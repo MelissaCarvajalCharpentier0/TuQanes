@@ -1,0 +1,389 @@
+{
+  "project": "Water Potability quantum kernel with pytket",
+  "methodology": "from scratch; only water_potability.csv is read",
+  "dataset": {
+    "source": "/content/drive/MyDrive/Colab Notebooks/water_potability.csv",
+    "sha256": "904004bde729bfe3d2e195f46343bceead09e32a0eb95bb8184e7e20e029b2bf",
+    "rows": 3276,
+    "features_original": [
+      "ph",
+      "Hardness",
+      "Solids",
+      "Chloramines",
+      "Sulfate",
+      "Conductivity",
+      "Organic_carbon",
+      "Trihalomethanes",
+      "Turbidity"
+    ]
+  },
+  "seeds": {
+    "split": 20260722,
+    "selector_split": 20260723,
+    "feature_model": 20260724,
+    "quantum_sample": 20260725,
+    "folds": 20260726,
+    "shots": 20260727
+  },
+  "split_sizes": {
+    "selector_pool": 1965,
+    "quantum_candidate_pool": 655,
+    "locked_holdout": 656,
+    "quantum64": 64
+  },
+  "selected_features": [
+    "Conductivity",
+    "ph",
+    "Sulfate",
+    "Hardness",
+    "Chloramines"
+  ],
+  "n_qubits": 5,
+  "maps": [
+    {
+      "name": "pytket_linear_r1",
+      "reps": 1,
+      "topology": "linear",
+      "alpha": 1.0
+    },
+    {
+      "name": "pytket_ring_r1",
+      "reps": 1,
+      "topology": "ring",
+      "alpha": 1.0
+    },
+    {
+      "name": "pytket_linear_r2",
+      "reps": 2,
+      "topology": "linear",
+      "alpha": 1.0
+    }
+  ],
+  "svc": {
+    "kernel": "precomputed",
+    "C_grid": [
+      0.1,
+      1.0,
+      10.0
+    ],
+    "class_weight": "balanced"
+  },
+  "pytket_version": "2.18.1",
+  "critical_lock": {
+    "lock_version": 1,
+    "dataset_source_path": "/content/drive/MyDrive/Colab Notebooks/water_potability.csv",
+    "dataset_sha256": "904004bde729bfe3d2e195f46343bceead09e32a0eb95bb8184e7e20e029b2bf",
+    "only_external_input": "water_potability.csv",
+    "records": [
+      {
+        "file": "water_potability_input_snapshot.csv",
+        "sha256": "904004bde729bfe3d2e195f46343bceead09e32a0eb95bb8184e7e20e029b2bf",
+        "bytes": 525187
+      },
+      {
+        "file": "selector_pool_raw.csv",
+        "sha256": "aadce19f2661065f00c917ed0705d52c73fc17f87fa7149ea88d95da345224c9",
+        "bytes": 320553
+      },
+      {
+        "file": "quantum_candidate_pool_raw.csv",
+        "sha256": "73e4cdb1851b8d6d66480744400b44919385794213b5c8c466a7b432b85c6fb6",
+        "bytes": 106929
+      },
+      {
+        "file": "locked_holdout_raw.csv",
+        "sha256": "dcde9a943e25eb182c615c2d592cc514402c0bf7f6b544ebd5bd3a481cd4d119",
+        "bytes": 106915
+      },
+      {
+        "file": "split_assignments.csv",
+        "sha256": "03d6bfe05b2f06078a3586b635e203bb82f7c749aa6ad2666598c0e9038c5aaa",
+        "bytes": 67703
+      },
+      {
+        "file": "feature_importances.csv",
+        "sha256": "91ccf16b789da3f1e66abf391ce8412eea7ce74ebba94d63bb510cc7e337eb0c",
+        "bytes": 473
+      },
+      {
+        "file": "selected_features.json",
+        "sha256": "0dfca6e849994c07c28eb33d049f2e9ddd103599cff57cf1b929272476f97997",
+        "bytes": 327
+      },
+      {
+        "file": "pytket_quantum64_raw.csv",
+        "sha256": "fbab327ff3e797b7e0b1cfdf98af3fa3a7fe6b95153ab4c31bf305a0b9557880",
+        "bytes": 10627
+      },
+      {
+        "file": "pytket_quantum64_selected.csv",
+        "sha256": "fa90829649cfe85d51c9da1fc8eea9d1e1327055859dfaf0ac223585df464da0",
+        "bytes": 5977
+      },
+      {
+        "file": "pytket_quantum64_folds.csv",
+        "sha256": "011dc7fd71795cc0c0891661ff3e637dc754e5f115564749963926ce842261b2",
+        "bytes": 777
+      }
+    ]
+  },
+  "fold_kernel_records": [
+    {
+      "file": "kernel_pytket_linear_r1_fold0.npz",
+      "sha256": "5ca82ec5e92499146685b25d05925a4abaec1c90ae88e157424e4c9178f5f82d",
+      "bytes": 18317
+    },
+    {
+      "file": "kernel_pytket_linear_r1_fold1.npz",
+      "sha256": "331a13cb3b914fdd382ff3c6f1c4b22d4aa0868389248651f5dbbaebe44e0434",
+      "bytes": 18304
+    },
+    {
+      "file": "kernel_pytket_linear_r1_fold2.npz",
+      "sha256": "8bc866c9af83f28f5b55bc1aadaf2cc514b6ef574bbc7af1e4b37bb0f327e2aa",
+      "bytes": 18269
+    },
+    {
+      "file": "kernel_pytket_linear_r1_fold3.npz",
+      "sha256": "ce5e2b6e010c364fcc43d6102264ac006544e03c1159fe774f3dcc9dc952bd37",
+      "bytes": 18280
+    },
+    {
+      "file": "kernel_pytket_ring_r1_fold0.npz",
+      "sha256": "975d431033e8c0efcdd9042fc01a4c4e7b0b80605550a4664ab3f01378b27f34",
+      "bytes": 18322
+    },
+    {
+      "file": "kernel_pytket_ring_r1_fold1.npz",
+      "sha256": "63546b066baaeb5e46eba689f14c04aa5d9d48e7aae92dfc60c91ae24388567e",
+      "bytes": 18272
+    },
+    {
+      "file": "kernel_pytket_ring_r1_fold2.npz",
+      "sha256": "3f9d3a5a9c1939967221a023def8cf2ff532b92ad36675c311bcc2b0fa9be433",
+      "bytes": 18288
+    },
+    {
+      "file": "kernel_pytket_ring_r1_fold3.npz",
+      "sha256": "604eb8ffa91e36c1d7482ddb9f47949d33879db2927673ff6ed7c02295d24ca8",
+      "bytes": 18273
+    },
+    {
+      "file": "kernel_pytket_linear_r2_fold0.npz",
+      "sha256": "71b73d68f715075752e61cf76736b09d21d17afa32938ff0bdc0f496b49188d3",
+      "bytes": 18605
+    },
+    {
+      "file": "kernel_pytket_linear_r2_fold1.npz",
+      "sha256": "f1ae6d887ec3ab1f0fdfb614260379fc8dd16fff33c351a07b343d217466ce18",
+      "bytes": 18578
+    },
+    {
+      "file": "kernel_pytket_linear_r2_fold2.npz",
+      "sha256": "25047c5a2f80ea17b49252f0eee4793261cf6d898ce2dbeaf3a5e858a14acfa6",
+      "bytes": 18549
+    },
+    {
+      "file": "kernel_pytket_linear_r2_fold3.npz",
+      "sha256": "63c97d3a8c705b1f72b3f6da025eac70cf0683ffaeb8c59ee322e61239a07dc9",
+      "bytes": 18521
+    }
+  ],
+  "artifacts": [
+    {
+      "file": "DATA_LOCK.json",
+      "sha256": "2c245d31f0334ebe2d1e7abb773ba20d77dd3bf1492efbb4c1fc0f70f29fb784",
+      "bytes": 1877
+    },
+    {
+      "file": "circuit_pytket_linear_r1.qasm",
+      "sha256": "83b751e800668909d197806cfa3acfe83de7f03eca784d9c3bf43148386aeed3",
+      "bytes": 656
+    },
+    {
+      "file": "circuit_pytket_linear_r2.qasm",
+      "sha256": "e463e72d183d83e455d91632c3a04d43a7f2df9d7ba263e94f999ec0536c0def",
+      "bytes": 1224
+    },
+    {
+      "file": "circuit_pytket_ring_r1.qasm",
+      "sha256": "15e302b93cda4f152866e9b4eb4cabd1ceb5ca734e9c2fe79eb6ab71512209bb",
+      "bytes": 717
+    },
+    {
+      "file": "feature_importances.csv",
+      "sha256": "91ccf16b789da3f1e66abf391ce8412eea7ce74ebba94d63bb510cc7e337eb0c",
+      "bytes": 473
+    },
+    {
+      "file": "heatmap_pytket_linear_r1.png",
+      "sha256": "7897dd6e41fbae57f953d806ba4f21c54e4b34248ef68e8c32ac92e003df8bb2",
+      "bytes": 72708
+    },
+    {
+      "file": "heatmap_pytket_linear_r2.png",
+      "sha256": "707890cc345febbd7d4d5fe7254c98e9be67aa29e101ce1942a86221db338373",
+      "bytes": 72527
+    },
+    {
+      "file": "heatmap_pytket_ring_r1.png",
+      "sha256": "e5221669c2f569169dfc1bd14b856f6e49249f9ab222d15619cbbcdcb41258e3",
+      "bytes": 72849
+    },
+    {
+      "file": "kernel_pytket_linear_r1_fold0.npz",
+      "sha256": "5ca82ec5e92499146685b25d05925a4abaec1c90ae88e157424e4c9178f5f82d",
+      "bytes": 18317
+    },
+    {
+      "file": "kernel_pytket_linear_r1_fold1.npz",
+      "sha256": "331a13cb3b914fdd382ff3c6f1c4b22d4aa0868389248651f5dbbaebe44e0434",
+      "bytes": 18304
+    },
+    {
+      "file": "kernel_pytket_linear_r1_fold2.npz",
+      "sha256": "8bc866c9af83f28f5b55bc1aadaf2cc514b6ef574bbc7af1e4b37bb0f327e2aa",
+      "bytes": 18269
+    },
+    {
+      "file": "kernel_pytket_linear_r1_fold3.npz",
+      "sha256": "ce5e2b6e010c364fcc43d6102264ac006544e03c1159fe774f3dcc9dc952bd37",
+      "bytes": 18280
+    },
+    {
+      "file": "kernel_pytket_linear_r2_fold0.npz",
+      "sha256": "71b73d68f715075752e61cf76736b09d21d17afa32938ff0bdc0f496b49188d3",
+      "bytes": 18605
+    },
+    {
+      "file": "kernel_pytket_linear_r2_fold1.npz",
+      "sha256": "f1ae6d887ec3ab1f0fdfb614260379fc8dd16fff33c351a07b343d217466ce18",
+      "bytes": 18578
+    },
+    {
+      "file": "kernel_pytket_linear_r2_fold2.npz",
+      "sha256": "25047c5a2f80ea17b49252f0eee4793261cf6d898ce2dbeaf3a5e858a14acfa6",
+      "bytes": 18549
+    },
+    {
+      "file": "kernel_pytket_linear_r2_fold3.npz",
+      "sha256": "63c97d3a8c705b1f72b3f6da025eac70cf0683ffaeb8c59ee322e61239a07dc9",
+      "bytes": 18521
+    },
+    {
+      "file": "kernel_pytket_ring_r1_fold0.npz",
+      "sha256": "975d431033e8c0efcdd9042fc01a4c4e7b0b80605550a4664ab3f01378b27f34",
+      "bytes": 18322
+    },
+    {
+      "file": "kernel_pytket_ring_r1_fold1.npz",
+      "sha256": "63546b066baaeb5e46eba689f14c04aa5d9d48e7aae92dfc60c91ae24388567e",
+      "bytes": 18272
+    },
+    {
+      "file": "kernel_pytket_ring_r1_fold2.npz",
+      "sha256": "3f9d3a5a9c1939967221a023def8cf2ff532b92ad36675c311bcc2b0fa9be433",
+      "bytes": 18288
+    },
+    {
+      "file": "kernel_pytket_ring_r1_fold3.npz",
+      "sha256": "604eb8ffa91e36c1d7482ddb9f47949d33879db2927673ff6ed7c02295d24ca8",
+      "bytes": 18273
+    },
+    {
+      "file": "locked_holdout_raw.csv",
+      "sha256": "dcde9a943e25eb182c615c2d592cc514402c0bf7f6b544ebd5bd3a481cd4d119",
+      "bytes": 106915
+    },
+    {
+      "file": "pytket_baseline_circuit.html",
+      "sha256": "a63a4510c1514592a4e04cd4c6dd825590f6fa57157ec736814c95c1b7378f1e",
+      "bytes": 6303
+    },
+    {
+      "file": "pytket_baseline_circuit.qasm",
+      "sha256": "83b751e800668909d197806cfa3acfe83de7f03eca784d9c3bf43148386aeed3",
+      "bytes": 656
+    },
+    {
+      "file": "pytket_circuit_resources.csv",
+      "sha256": "f705dc2578f07d24e59ae6a699d3c81d8d61cd132cfba3079bbac469a7bdabad",
+      "bytes": 237
+    },
+    {
+      "file": "pytket_cv_summary.csv",
+      "sha256": "541d3a14734aa2fb699c13a1770309aa98ca26cd33a7d9c490c0ec38e941ac62",
+      "bytes": 635
+    },
+    {
+      "file": "pytket_fold_metrics.csv",
+      "sha256": "214e83212285f0a75f21380e81c3dff195d16b12e26a695a715210b0f6ab45ee",
+      "bytes": 2146
+    },
+    {
+      "file": "pytket_global_kernels.npz",
+      "sha256": "b9de2d8069c8c5bfd7eaf10b4300309de5cd4e47f9565e204f9a678bfa055811",
+      "bytes": 63015
+    },
+    {
+      "file": "pytket_inner_c_search.csv",
+      "sha256": "861685801dfa2f41c3d25abc0d6d327d4e6cb47fbe9d080530fa60f01ad0e4a2",
+      "bytes": 2265
+    },
+    {
+      "file": "pytket_kernel_geometry.csv",
+      "sha256": "256392e1627f4d9529d160edb3843ce76ee6652af5507eb590d8b1d57e3c2ca9",
+      "bytes": 644
+    },
+    {
+      "file": "pytket_quantum64_folds.csv",
+      "sha256": "011dc7fd71795cc0c0891661ff3e637dc754e5f115564749963926ce842261b2",
+      "bytes": 777
+    },
+    {
+      "file": "pytket_quantum64_raw.csv",
+      "sha256": "fbab327ff3e797b7e0b1cfdf98af3fa3a7fe6b95153ab4c31bf305a0b9557880",
+      "bytes": 10627
+    },
+    {
+      "file": "pytket_quantum64_selected.csv",
+      "sha256": "fa90829649cfe85d51c9da1fc8eea9d1e1327055859dfaf0ac223585df464da0",
+      "bytes": 5977
+    },
+    {
+      "file": "pytket_shot_sensitivity.csv",
+      "sha256": "e352f7177fa52537ae69c8393067e28f8309e2461f3d058e1f77b0a7387f4a41",
+      "bytes": 6396
+    },
+    {
+      "file": "pytket_shot_sensitivity_summary.csv",
+      "sha256": "53b622b1fa35de5f4ed0d24190b669776eb5f11a453f56979eb700a0d593217c",
+      "bytes": 321
+    },
+    {
+      "file": "quantum_candidate_pool_raw.csv",
+      "sha256": "73e4cdb1851b8d6d66480744400b44919385794213b5c8c466a7b432b85c6fb6",
+      "bytes": 106929
+    },
+    {
+      "file": "selected_features.json",
+      "sha256": "0dfca6e849994c07c28eb33d049f2e9ddd103599cff57cf1b929272476f97997",
+      "bytes": 327
+    },
+    {
+      "file": "selector_pool_raw.csv",
+      "sha256": "aadce19f2661065f00c917ed0705d52c73fc17f87fa7149ea88d95da345224c9",
+      "bytes": 320553
+    },
+    {
+      "file": "split_assignments.csv",
+      "sha256": "03d6bfe05b2f06078a3586b635e203bb82f7c749aa6ad2666598c0e9038c5aaa",
+      "bytes": 67703
+    },
+    {
+      "file": "water_potability_input_snapshot.csv",
+      "sha256": "904004bde729bfe3d2e195f46343bceead09e32a0eb95bb8184e7e20e029b2bf",
+      "bytes": 525187
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+check,passed
+64 real samples,True
+balanced labels 32/32,True
+four frozen folds,True
+nine features equal nine qubits,True
+only pauli_feature_map family studied,True
+SVC uses precomputed kernels,True
+preprocessing fit inside each outer fold,True
+C selected only inside outer training,True

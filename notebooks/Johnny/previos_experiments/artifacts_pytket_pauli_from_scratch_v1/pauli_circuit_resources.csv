@@ -1,0 +1,6 @@
+name,local_terms,pair_terms,reps,topology,scaling,alpha,n_qubits,statevector_dimension,depth_decomposed,two_qubit_depth_decomposed,cx_count_decomposed,two_qubit_gate_count_decomposed,total_gate_count_decomposed
+pauli_Z_ZZ_linear_r1_robust,"('Z',)","('ZZ',)",1,linear,robust_atan,1.0,5,32,14,8,8,8,22
+pauli_Z_ZZ_ring_r1_robust,"('Z',)","('ZZ',)",1,ring,robust_atan,1.0,5,32,17,10,10,10,25
+pauli_XZ_XXZZ_linear_r1_robust,"('X', 'Z')","('XX', 'ZZ')",1,linear,robust_atan,1.0,5,32,31,12,16,16,65
+pauli_Z_ZZ_linear_r2_robust,"('Z',)","('ZZ',)",2,linear,robust_atan,1.0,5,32,22,12,16,16,44
+pauli_Z_ZZ_linear_r1_minmax,"('Z',)","('ZZ',)",1,linear,minmax,1.0,5,32,14,8,8,8,22

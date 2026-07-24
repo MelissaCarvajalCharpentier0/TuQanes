@@ -1,0 +1,14 @@
+{"map": "custom_water_domain_r1_robust", "chunk": 0, "job_name": "tq-pilot64-strict-v1-custom-r1-compile-000", "job_id": "25f32160-8bc7-4b62-b71d-2abb8331954a", "programs": 300}
+{"map": "custom_water_domain_r1_robust", "chunk": 1, "job_name": "tq-pilot64-strict-v1-custom-r1-compile-001", "job_id": "98f3335b-13b8-4822-97e3-d3d4d0f3b030", "programs": 300}
+{"map": "custom_water_domain_r1_robust", "chunk": 2, "job_name": "tq-pilot64-strict-v1-custom-r1-compile-002", "job_id": "ee135b77-3928-46e2-8701-5fba189161ef", "programs": 300}
+{"map": "custom_water_domain_r1_robust", "chunk": 3, "job_name": "tq-pilot64-strict-v1-custom-r1-compile-003", "job_id": "f88a58c1-8953-4221-bffd-559d45f94900", "programs": 300}
+{"map": "custom_water_domain_r1_robust", "chunk": 4, "job_name": "tq-pilot64-strict-v1-custom-r1-compile-004", "job_id": "9a020803-d093-433b-bf3c-3140c6d42000", "programs": 300}
+{"map": "custom_water_domain_r1_robust", "chunk": 5, "job_name": "tq-pilot64-strict-v1-custom-r1-compile-005", "job_id": "0fcf9b5f-3af4-44db-aa06-855696a730a5", "programs": 300}
+{"map": "custom_water_domain_r1_robust", "chunk": 6, "job_name": "tq-pilot64-strict-v1-custom-r1-compile-006", "job_id": "67db9f75-8d81-4feb-8d4c-7ca1fded8cf8", "programs": 216}
+{"map": "zz_ring_r2_robust", "chunk": 0, "job_name": "tq-pilot64-strict-v1-zz-ring-r2-compile-000", "job_id": "675acd1a-39f7-4109-84ef-3c373c555ef2", "programs": 300}
+{"map": "zz_ring_r2_robust", "chunk": 1, "job_name": "tq-pilot64-strict-v1-zz-ring-r2-compile-001", "job_id": "788e21d6-b05b-4d02-9d29-4abe21edb9b6", "programs": 300}
+{"map": "zz_ring_r2_robust", "chunk": 2, "job_name": "tq-pilot64-strict-v1-zz-ring-r2-compile-002", "job_id": "fdb76120-f9dd-4315-a23f-ef977c71cdb5", "programs": 300}
+{"map": "zz_ring_r2_robust", "chunk": 3, "job_name": "tq-pilot64-strict-v1-zz-ring-r2-compile-003", "job_id": "05193b82-4544-41fd-9ac8-418f9cfe478e", "programs": 300}
+{"map": "zz_ring_r2_robust", "chunk": 4, "job_name": "tq-pilot64-strict-v1-zz-ring-r2-compile-004", "job_id": "3a781f3f-43df-4321-8b44-5f6379ca3d35", "programs": 300}
+{"map": "zz_ring_r2_robust", "chunk": 5, "job_name": "tq-pilot64-strict-v1-zz-ring-r2-compile-005", "job_id": "3b030098-c47d-4d02-b538-72754b95af89", "programs": 300}
+{"map": "zz_ring_r2_robust", "chunk": 6, "job_name": "tq-pilot64-strict-v1-zz-ring-r2-compile-006", "job_id": "0682f2bf-50e4-49bb-9bba-554c6acfa410", "programs": 216}
