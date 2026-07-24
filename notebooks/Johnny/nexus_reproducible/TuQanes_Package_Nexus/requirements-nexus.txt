@@ -1,0 +1,13 @@
+# Dependencias para ejecutar fuera de Nexus Lab.
+# La version efectiva de qnexus se registra en run_manifest.json y debe fijarse
+# despues de la primera ejecucion confirmada en el entorno oficial del evento.
+qnexus
+pytket
+numpy==2.5.1
+pandas
+scipy==1.18.0
+scikit-learn==1.9.0
+matplotlib==3.11.1
+jupyter
+ipykernel
+nbformat==5.10.4
