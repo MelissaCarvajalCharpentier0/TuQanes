@@ -389,6 +389,20 @@ Resumen general de los intentos (el detalle vive en el `README.md` de cada carpe
 | `README.md` | este documento |
 | Base para el informe técnico (PDF ≤ 8 pág.) | secciones 1, 6, 7, 9, 10, 13 |
 
+## 16. Declaración
+Se eligió Python como lenguaje principal por su ecosistema maduro en ciencia de datos
+y computación cuántica, lo que permite integrar de forma fluida el preprocesamiento clásico 
+(NumPy, pandas, scikit-learn) con los circuitos cuánticos.
+
+Para la parte cuántica usamos Qiskit (SDK de IBM) como framework principal para construir, 
+simular y ejecutar circuitos cuánticos, junto con Qiskit Aer para simulación local de alto 
+rendimiento. Sin embargo, para las pruebas realizadas en la plataforma de Nexus, dada por 
+Quantinuum con Guppylang, un lenguaje cuántico de alto nivel que permite expresar algoritmos 
+cuánticos con control de flujo clásico de forma más expresiva.
+
+Por limitaciones de tiempo, no se alcanzó a realizar pruebas exhaustivas (múltiples semillas, análisis de robustez ante ruido), 
+por lo que los resultados deben tomarse como preliminares.
+
 ---
 
 *No se afirma ventaja cuántica. Este proyecto es un benchmark académico reproducible, no un
