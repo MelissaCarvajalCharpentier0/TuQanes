@@ -1,0 +1,121 @@
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- Download Vue 3-->
+<script type="application/javascript" src="https://unpkg.com/vue@3"></script>
+<!-- Download Circuit Renderer with styles -->
+<script type="application/javascript" src="https://unpkg.com/pytket-circuit-renderer@0.10/dist/pytket-circuit-renderer.umd.js"></script>
+<link rel="stylesheet" href="https://unpkg.com/pytket-circuit-renderer@0.10/dist/pytket-circuit-renderer.css">
+
+<!-- Fallback to jsdelivr in case UNPKG is down -->
+<script type="application/javascript">
+    if (typeof Vue === "undefined") {
+        const loadVue = new Promise(resolve => {
+            const vueFallback = document.createElement("script")
+            vueFallback.type = "application/javascript"
+            vueFallback.src = "https://cdn.jsdelivr.net/npm/vue@3"
+            vueFallback.async = false
+            vueFallback.defer = false
+            vueFallback.addEventListener('load', () => {
+              console.log("vue loaded");
+              resolve(true)
+            })
+            document.head.appendChild(vueFallback)
+        })
+        const loadRenderer = new Promise(resolve => {
+            const rendererFallback = document.createElement("script")
+            rendererFallback.type = "application/javascript"
+            rendererFallback.src = "https://cdn.jsdelivr.net/npm/pytket-circuit-renderer@0.10/dist/pytket-circuit-renderer.umd.min.js"
+            rendererFallback.async = false
+            rendererFallback.defer = false
+            rendererFallback.addEventListener('load', () => {
+              console.log("renderer loaded");
+              resolve(true)
+            })
+            document.head.appendChild(rendererFallback)
+        })
+        const loadCSS = new Promise(resolve => {
+            const cssFallback = document.createElement("link")
+            cssFallback.rel = "stylesheet"
+            cssFallback.href = "https://cdn.jsdelivr.net/npm/pytket-circuit-renderer@0.10/dist/pytket-circuit-renderer.min.css"
+            cssFallback.addEventListener('load', () => {
+              console.log("css loaded");
+              resolve(true)
+            })
+            document.head.appendChild(cssFallback)
+        })
+        window['_circuitRendererLoading'] = Promise.all([loadVue, loadRenderer, loadCSS])
+    } else {
+        window['_circuitRendererLoading'] = new Promise(resolve => resolve("already loaded"))
+    }
+</script>
+</head>
+<body>
+
+
+<div style="
+    position:absolute;
+    top:0;bottom:0;left:0;right:0;
+    margin:auto;resize:both;display:block;overflow:hidden;
+    width:min(500px, 100%);
+    height:min(400px, 100%);
+    max-width:100%;
+    max-height:100%;">
+
+    <div id="circuit-display-vue-container-09a06b34-a65e-4f0f-9792-a953fc0492ea" class="pytket-circuit-display-container">
+        <div style="display: none">
+            <div id="circuit-json-to-display">{"bits": [], "commands": [{"args": [["q", [0]]], "op": {"type": "H"}}, {"args": [["q", [1]]], "op": {"type": "H"}}, {"args": [["q", [2]]], "op": {"type": "H"}}, {"args": [["q", [3]]], "op": {"type": "H"}}, {"args": [["q", [4]]], "op": {"type": "H"}}, {"args": [["q", [0]]], "op": {"params": ["3.6561233621755"], "type": "Ry"}}, {"args": [["q", [1]]], "op": {"params": ["0.170956791453253"], "type": "Ry"}}, {"args": [["q", [2]]], "op": {"params": ["3.70283672382141"], "type": "Ry"}}, {"args": [["q", [3]]], "op": {"params": ["0.3546014393288"], "type": "Ry"}}, {"args": [["q", [4]]], "op": {"params": ["3.7657876385738"], "type": "Ry"}}, {"args": [["q", [0]]], "op": {"params": ["3.90189534882485"], "type": "Rz"}}, {"args": [["q", [1]]], "op": {"params": ["0.0242469418439036"], "type": "Rz"}}, {"args": [["q", [2]]], "op": {"params": ["3.926738715382"], "type": "Rz"}}, {"args": [["q", [3]]], "op": {"params": ["0.104319438864402"], "type": "Rz"}}, {"args": [["q", [4]]], "op": {"params": ["3.9544903097228"], "type": "Rz"}}, {"args": [["q", [1]], ["q", [0]]], "op": {"params": ["3.84671561167638"], "type": "ZZPhase"}}, {"args": [["q", [2]], ["q", [4]]], "op": {"params": ["0.19797137818435"], "type": "ZZPhase"}}, {"args": [["q", [3]], ["q", [0]]], "op": {"params": ["3.73986314512189"], "type": "ZZPhase"}}, {"args": [["q", [1]], ["q", [4]]], "op": {"params": ["3.90983541537966"], "type": "ZZPhase"}}, {"args": [["q", [0]]], "op": {"params": ["3.8853744540585"], "type": "Rx"}}, {"args": [["q", [1]]], "op": {"params": ["0.0569855971510843"], "type": "Rx"}}, {"args": [["q", [3]], ["q", [2]]], "op": {"params": ["3.80017867766786"], "type": "ZZPhase"}}, {"args": [["q", [4]]], "op": {"params": ["3.92192921285793"], "type": "Rx"}}, {"args": [["q", [0]]], "op": {"params": ["3.75684249750267"], "type": "Ry"}}, {"args": [["q", [1]]], "op": {"params": ["0.12088470652649"], "type": "Ry"}}, {"args": [["q", [2]]], "op": {"params": ["3.90094557460714"], "type": "Rx"}}, {"args": [["q", [3]]], "op": {"params": ["0.118200479776267"], "type": "Rx"}}, {"args": [["q", [4]]], "op": {"params": ["3.83438685099782"], "type": "Ry"}}, {"args": [["q", [0]]], "op": {"params": ["3.93062953588811"], "type": "Rz"}}, {"args": [["q", [1]]], "op": {"params": ["0.0171451770008601"], "type": "Rz"}}, {"args": [["q", [2]]], "op": {"params": ["3.78987383229451"], "type": "Ry"}}, {"args": [["q", [3]]], "op": {"params": ["0.250741082367904"], "type": "Ry"}}, {"args": [["q", [4]]], "op": {"params": ["3.96781978939529"], "type": "Rz"}}, {"args": [["q", [1]], ["q", [0]]], "op": {"params": ["3.89161156956633"], "type": "ZZPhase"}}, {"args": [["q", [2]]], "op": {"params": ["3.94819644884818"], "type": "Rz"}}, {"args": [["q", [3]]], "op": {"params": ["0.0737649826305944"], "type": "Rz"}}, {"args": [["q", [3]], ["q", [0]]], "op": {"params": ["3.81605546587915"], "type": "ZZPhase"}}, {"args": [["q", [2]], ["q", [4]]], "op": {"params": ["0.139986903995"], "type": "ZZPhase"}}, {"args": [["q", [0]]], "op": {"params": ["3.91894749916756"], "type": "Rx"}}, {"args": [["q", [1]], ["q", [4]]], "op": {"params": ["3.93624401079209"], "type": "ZZPhase"}}, {"args": [["q", [3]], ["q", [2]]], "op": {"params": ["3.85870498795328"], "type": "ZZPhase"}}, {"args": [["q", [1]]], "op": {"params": ["0.0402949021754965"], "type": "Rx"}}, {"args": [["q", [2]]], "op": {"params": ["3.92995794409817"], "type": "Rx"}}, {"args": [["q", [3]]], "op": {"params": ["0.0835803607893015"], "type": "Rx"}}, {"args": [["q", [4]]], "op": {"params": ["3.94479561699927"], "type": "Rx"}}], "created_qubits": [], "discarded_qubits": [], "implicit_permutation": [[["q", [0]], ["q", [0]]], [["q", [1]], ["q", [1]]], [["q", [2]], ["q", [2]]], [["q", [3]], ["q", [3]]], [["q", [4]], ["q", [4]]]], "phase": "0.0", "qubits": [["q", [0]], ["q", [1]], ["q", [2]], ["q", [3]], ["q", [4]]]}</div>
+        </div>
+        <circuit-display-container
+                :circuit-element-str="'#circuit-json-to-display'"
+                :init-render-options="initRenderOptions"
+                view-format="None"
+        ></circuit-display-container>
+    </div>
+    <script type="application/javascript">
+      (async function () {
+        await window['_circuitRendererLoading']
+
+        const circuitRendererUid = "09a06b34-a65e-4f0f-9792-a953fc0492ea";
+        const displayOptions = JSON.parse('{"recursive": true, "condensed": false, "darkTheme": false}');
+
+        // Script to initialise the circuit renderer app
+
+const { createApp } = Vue;
+const circuitDisplayContainer = window["pytket-circuit-renderer"].default;
+// Init variables to be shared between circuit display instances
+if (typeof window.pytketCircuitDisplays === "undefined") {
+    window.pytketCircuitDisplays = {};
+}
+// Create the root Vue component
+const app = createApp({
+    delimiters: ['[[#', '#]]'],
+    components: { circuitDisplayContainer },
+    data () {
+      return {
+        initRenderOptions: displayOptions,
+      }
+    }
+})
+app.config.unwrapInjectedRef = true;
+app.mount("#circuit-display-vue-container-"+circuitRendererUid);
+window.pytketCircuitDisplays[circuitRendererUid] = app;
+      })()
+    </script>
+
+
+</div>
+
+
+</body>
+</html>
+
+

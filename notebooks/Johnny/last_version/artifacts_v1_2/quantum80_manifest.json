@@ -1,0 +1,24 @@
+{
+  "rows": 80,
+  "class_counts": {
+    "0": 40,
+    "1": 40
+  },
+  "feature_set": "chem5_v01",
+  "features": [
+    "Sulfate",
+    "ph",
+    "Conductivity",
+    "Chloramines",
+    "Hardness"
+  ],
+  "feature_selection_policy": "predefined_physicochemical_basis",
+  "feature_selection_reason": "Se prioriza una base fisicoquimica interpretable: Sulfate, ph, Conductivity, Chloramines y Hardness. Conductivity reemplaza a Solids como proxy directo de la carga ionica disuelta; la pequena diferencia de CV se acepta como trade-off de dominio.",
+  "selection_strategy": "40 per class by evenly spaced quantiles of an unbalanced SVM ranking decision_score on training only",
+  "ranking_model": {
+    "C": 10.0,
+    "gamma": "auto",
+    "balance_training": false
+  },
+  "holdout_intersection": 0
+}
