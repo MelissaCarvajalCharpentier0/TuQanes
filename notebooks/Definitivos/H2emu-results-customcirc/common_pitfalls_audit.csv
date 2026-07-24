@@ -1,0 +1,18 @@
+Chequeo,Estado,Detalle
+Fuga train/test,OK,IDs compartidos: 0
+Subconjunto de auditoría solo del train,OK,"12 IDs, todos del train"
+Estandarización antes del encoding,OK,"media=-2.26e-17, sd=1.0000"
+"Ángulos acotados a (-pi/2, pi/2)",OK,|theta| máx = 1.5692
+Kernel exacto PSD,OK,lambda_min = +1.624e-03
+Kernels de H2 PSD (o regularizados),OK,PSD directo en todos: True; lambda_min mín = +5.492e-02; fallback K + 1e-08*I disponible
+Mismas particiones para ambos modelos,OK,20 particiones x 2 modelos = 40 filas (verificado por groupby)
+Mismo conjunto de test,OK,ambas matrices de confusión suman n_test = 16
+Múltiples corridas reportadas,OK,20 particiones + IC bootstrap (B=20000) + Wilcoxon
+Mediana por clase ajustada solo en train,OK,las medianas del imputador difieren de las del dataset completo -> se ajustaron solo con train
+Test usado una sola vez,OK,Bloque 14; no participó en tuning ni en diseño del circuito
+Circuito de overlap validado,OK,error máx vs statevector = 1.11e-15
+Compilación de Nexus preserva el circuito,REVISAR,desviación máx = 1.12e+00 sobre 78 circuitos
+Kernel no trivial (ni uniforme ni identidad),OK,"media=0.2718, sd=0.1950"
+Corrida definitiva en emulador con ruido,OK,"device = H2-Emulator, noisy_simulation = True"
+Checkpoints consistentes con AUDIT_N,OK,"2 checkpoints, todos de N=12"
+Alcance del kernel de hardware declarado,OK,K de H2-Emulator medido sobre N=12 (auditoría de ruido); el QSVM del Bloque 14 usa kernel exacto por statevector. LIMITACIÓN A DECLARAR EN EL INFORME.

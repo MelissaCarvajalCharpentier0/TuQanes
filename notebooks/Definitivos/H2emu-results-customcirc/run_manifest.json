@@ -1,0 +1,152 @@
+{
+  "timestamp": "2026-07-24T14:54:55",
+  "seed": 4524,
+  "device": "H2-Emulator",
+  "noisy_simulation": true,
+  "audit_n": 12,
+  "opt_level": 2,
+  "features": [
+    "ph",
+    "Hardness",
+    "Sulfate",
+    "Conductivity"
+  ],
+  "qubit_map": {
+    "0": "ph",
+    "1": "Hardness",
+    "2": "Sulfate",
+    "3": "Conductivity"
+  },
+  "custom_edges": [
+    [
+      0,
+      1
+    ],
+    [
+      1,
+      3
+    ],
+    [
+      2,
+      3
+    ]
+  ],
+  "angle_encoding": "theta = (pi/2) * tanh(z)",
+  "n_train": 64,
+  "n_test": 16,
+  "cv_partitions": 20,
+  "rbf_best_params": {
+    "C": "1",
+    "gamma": "scale"
+  },
+  "qsvm_C": 1.0,
+  "shot_levels": [
+    256,
+    1024
+  ],
+  "n_overlap_circuits": 78,
+  "overlap_validation_max_error": 1.1102230246251565e-15,
+  "compilation_max_deviation": 1.1225396527026767,
+  "total_shots_consumed": 99840,
+  "finite_sampling_diagnostics": [
+    {
+      "Shots": 256,
+      "MAE": 0.019136,
+      "MAE_offdiag": 0.02061,
+      "Max_abs_error": 0.075489,
+      "Frobenius_rel": 0.056556,
+      "Correlation": 0.992947,
+      "Lambda_min": 0.05492,
+      "Is_PSD": true,
+      "SE_worstcase": 0.03125,
+      "SE_binomial_exp": 0.018456,
+      "Excess_over_binomial": 0.002153,
+      "Device": "H2-Emulator",
+      "Noisy": true
+    },
+    {
+      "Shots": 1024,
+      "MAE": 0.007649,
+      "MAE_offdiag": 0.008093,
+      "Max_abs_error": 0.038526,
+      "Frobenius_rel": 0.023894,
+      "Correlation": 0.998843,
+      "Lambda_min": 0.090203,
+      "Is_PSD": true,
+      "SE_worstcase": 0.015625,
+      "SE_binomial_exp": 0.009228,
+      "Excess_over_binomial": -0.001135,
+      "Device": "H2-Emulator",
+      "Noisy": true
+    }
+  ],
+  "compiled_2q_median": 5.0,
+  "compiled_depth_median": 11.0,
+  "final_model_kernel": "exact_statevector",
+  "hardware_kernel_scope": "N=12 audit subset only",
+  "final_test_metrics": {
+    "SVM_RBF": {
+      "Accuracy": 0.625,
+      "Balanced_Accuracy": 0.625,
+      "Precision": 0.6,
+      "Recall": 0.75,
+      "F1": 0.666667,
+      "MCC": 0.258199,
+      "ROC_AUC": 0.6875,
+      "Specificity": 0.5,
+      "Unsafe_Acceptance": 0.5,
+      "TN": 4,
+      "FP": 4,
+      "FN": 2,
+      "TP": 6
+    },
+    "QSVM_Custom": {
+      "Accuracy": 0.5625,
+      "Balanced_Accuracy": 0.5625,
+      "Precision": 0.571429,
+      "Recall": 0.5,
+      "F1": 0.533333,
+      "MCC": 0.125988,
+      "ROC_AUC": 0.6875,
+      "Specificity": 0.625,
+      "Unsafe_Acceptance": 0.375,
+      "TN": 5,
+      "FP": 3,
+      "FN": 4,
+      "TP": 4
+    }
+  },
+  "versions": {
+    "python": "3.11.10",
+    "numpy": "2.2.6",
+    "pandas": "2.2.3",
+    "sklearn": "1.5.2"
+  },
+  "artifacts": {
+    "counts_N12_shots1024.json": "15ec5552519d02e05163e8c340eff1ca397730f2cc1e8bdc41eadda02da5ba3e",
+    "counts_N12_shots256.json": "2101ecd6912a156acb94a79d2cbdef7b46e8d59278d35f39ff3144cf586d6c99",
+    "jobref_N12_shots1024.json": "8504c72727db7fc2019967090bfd63ede658d0cdbaf4c729496deaa3b0c289c5",
+    "jobref_N12_shots256.json": "fca424c33a97439657e82af00f94b923f8070eed61b669dc3f34135152f5ba3a",
+    "common_pitfalls_audit.csv": "e441bda9ec4b2be64c1329bdc08571b0912081cf86721ea6e91d0a0edcd7df5c",
+    "compiled_resources_h2.csv": "a150b93b57f463112741fefbb1ea30d15cdcc0acdb177bd736a7849e2b711642",
+    "confusion_matrices_test.png": "692b2108d48c815c1a6bb4ec831a97f65f1df25919c95d2c42f9759d0cdec47b",
+    "cv_folds_paired.csv": "9ba59287737a006244546c202df2d1d1757b718b93438cd6e656f769f0bf3649",
+    "cv_stability.png": "f4e78f9aa71b150a5cfc08d93c08620f9a107fb2478102a94fab69aacbe1f6cf",
+    "cv_summary.csv": "ea1e71f7d00f378db50bbc1422daefa4fc17d71cc822f927d176940c673a9bda",
+    "downstream_shot_noise.csv": "79e4fcef8340bf9f486e0e3398b8db6c08d8c8fa04372ac1857bd461f91edb30",
+    "final_test_metrics.csv": "df31b10fc8dffe5029ac9878baef709c5a43323ec40c8e4a638cbe34164adcb3",
+    "finite_sampling_diagnostics.csv": "c77f10d39f5f231e14f4d4e93578538f95ce572a27addb09734f9492da08cc6c",
+    "kernel_audit_exact_N12.npy": "592f9216003f825e57bfeeb550f2e5bf5732c6c5effdb079bb101223275c195f",
+    "kernel_audit_exact_N16.npy": "5192311b825b05fee363928a58206181dc38f688b13f9f631e11018e8f727b01",
+    "kernel_exact_vs_h2.png": "5c0178a48b23985255fb889d434c8a634bf90b2b827463901d1d99ba260f281d",
+    "kernel_h2_shots1024.npy": "5129ffae8fedc865bffa58df6e6453007427795e4a01c5110b97e1fcaa32484e",
+    "kernel_h2_shots256.npy": "7c61302b7ab2f38bd21ccc3058c8fedb69e57006e0d401848c6946b9e8b13ffe",
+    "kernel_structure.png": "7368ab1e91063db27c8d6a3b1719b7fc6efd94f6cc26a8aaaab4d04a93be8fad",
+    "kernel_train_exact.npy": "1123b2d9efcb422165fccff97b7cd5a21c1fa5d82c771ba0389616c3110d35cf",
+    "paired_comparison_cv.csv": "1e592496406bccc0f1fc6514d8d77d027cefed3beda997650cd1180eb00d17f2",
+    "rbf_gridsearch.csv": "1270488222f7fce7d2704ead16e8fe45ce6834a2aa582fd891bcf3c570eb50df",
+    "run_manifest.json": "d438aa4fe3ddb4939416c5c8095f5c19948680285e059e07761b24adf2463fa9",
+    "split_test.csv": "1136a80928601669d571d62c17720ce72c70eaa92813807b27835323f9046e07",
+    "split_train.csv": "5e75896840e316a550556901bc16b3a4c84d8100fe7218692eee56fb91606c64"
+  }
+}
